@@ -1,0 +1,25 @@
+footer{
+  .social{
+      text-align: center;
+      .p-social{
+        font-size: 15px;
+        margin-top:45px ;
+        margin-bottom: 24px;
+        font-family: 'Roboto', sans-serif;
+      }
+      .iconos-social{
+          a{
+               margin: 0px 9.5px;
+             color: $color-gray;
+          }
+     }
+    }
+      .p-copyright{
+       
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        margin:48px auto 22px auto ;
+        width: 222px;
+      }
+  
+}

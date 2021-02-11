@@ -1,0 +1,57 @@
+.crear-gifs{
+    display: none;
+    margin-top: 125px;
+
+    .creargif{
+     display: flex;
+     justify-content: space-evenly;
+        .camara{
+            display: flex;
+
+        }
+        .contenido{
+           width: 50%;
+            height: 390px;
+            border: 1px solid $color-principal;
+          
+        }
+            .caja1{
+                border-top: 1px solid #50e3c2;
+                border-left: 1px solid #50e3c2;
+                top: 1.25rem;
+                left: 1.25rem;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: absolute;
+            }
+            .caja2{
+                border-top: 1px solid #50e3c2;
+                border-right: 1px solid #50e3c2;
+                top: 1.25rem;
+                right: 1.25rem;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: absolute;
+            }
+            .caja3{
+                border-bottom: 1px solid #50e3c2;
+                border-left: 1px solid #50e3c2;
+                bottom: 1.25rem;
+                left: 1.25rem;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: absolute;
+            }
+            .caja4{
+                border-bottom: 1px solid #50e3c2;
+                border-right: 1px solid #50e3c2;
+                bottom: 1.25rem;
+                right: 1.25rem;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: absolute;
+            }
+         
+        
+    }
+}

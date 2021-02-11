@@ -1,0 +1,28 @@
+.trending{
+  
+    width: 100%;
+    height: 430px;
+    background-color: $background-trending;
+    text-align: center;
+    body.dark &{
+        background-color: $color-dark-gray-trending;
+        .h2-trending{
+            color: $color-light;
+        }
+        .p-trending{
+            color: $color-light;
+        }
+    }
+    .h2-trending{
+        color: $color-principal;
+        font-size:20px;
+        font-family: 'Montserrat', sans-serif;
+     padding-top: 46px;
+    }
+    .p-trending{
+        font-size: 16px;
+        width: 168px;
+        margin: 10px auto;
+        font-family: 'Roboto', sans-serif;
+    }
+}

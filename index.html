@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3bc7d78e54.js" ></script>
+    <link rel="icon" href="assets/logo-desktop.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>GIFOS by Gabriel Sanchez</title>
+</head>
+<body id="body" >
+
+    <header id="header">
+        <img src="./assets/logo-mobile.svg" alt="logo" id="logo">
+          
+            <!-- menu hamburguesa -->
+
+        <div class="burger " id="burger">
+                <i id="burger-icon" class="fas fa-bars"></i>
+        </div>   
+             
+              <ul class="menu-burger  cerrado" id="menuBurger" >
+                <li class="li-menu" id="modo-noc-di">MODO NOCTURNO</li>
+                <li class="linea-menu"></li>
+                <li class="li-menu" id="favoritos-li" >FAVORITOS</li>
+                <li class="linea-menu"></li>
+                <li class="li-menu" id="mis-gifos">MIS GIFOS</li>
+                <li class="linea-menu"></li>
+                <li>
+                    <img src="./assets/button-crear-gifo.svg" alt="boton crear gif" id="btn-crear-gif">
+                </li>
+              </ul>
+           
+    </header>
+    <!--Buscador de gifs-->
+    <main >
+        <section class="buscador" id="buscador">
+            <h1>
+                    Inspírate, busca, guarda y crea los mejores <span> GIFOS</span>      
+            </h1>
+            <img src="./assets/ilustra_header.svg" alt="bienvenida" class="img-buscador">
+            <div class="container-buscador" id="container-buscador">
+                <form class="form-buscador" id="form-buscador"> 
+                    <button type="submit" class="btn-buscador" id="btn-buscar">
+                     <i class="fas fa-search"></i>   
+                    </button>
+                   
+                    <input type="text"
+                     autocomplete="off" 
+                     name="search"
+                    class="input-buscador"
+                     id="input-buscador"
+                    placeholder="Busca GIFOS y más">
+                <button class="btn-buscar-derecha" id="btn-buscar-derecha">
+                    <i class="fas fa-search" id="btn-icon"></i>
+                    
+                </button>
+         
+            </form>
+            <!-- sugerencias-->
+                <ul class="sugerencia" id="sugerencia">
+                    
+                </ul>
+            </div>
+            <h4 class="titlo-trending">
+                Trending:
+            </h4>
+             <!--aca aparecen los topicos de trending-->
+            <div class="treding-topicos" id="trending-topics">  
+            </div>
+            
+            <div class="linea-divisoria"></div>
+            <!--el titulo se crea apartir del valor del input-->
+            <h2 class="titulo-resultado" id="titulo-resultado"></h2>
+            <div class="contenedor-gifs" id="contenedor-gifs"></div>
+            <div class="btn-ver-mas" id="btn-ver-mas">VER MÁS</div>
+        </section>
+
+        <!--seccion favoritos-->
+        <section class="favoritos" id="favoritos">
+            <img  class="fav-icon" src="./assets/icon-favoritos.svg" alt="icono favorito">
+            <h2 class="h2-favoritos">Favoritos</h2> 
+            <!--aca se guardan los gifos-->
+            <div class="contenedor-favoritos" id="contenedor-favoritos">
+            </div>          
+        </section>
+
+        <!--seccion mis gifos-->
+        <section class="mis-gifos" id="mis-gifos-sec">
+            <img class="misgifos-icon" src="./assets/icon-mis-gifos.svg" alt="mis gifos">
+            <h2 class="h2-misgifos">Mis GIFOS</h2>
+            <!--se guardan los gifos-->
+            <div class="contenedor-misgifos" id="contenedor-gifos">
+            </div>
+        </section>
+
+        <!-- seccion trending-->
+        <section class="trending" > 
+            <h2 class="h2-trending">Trending GIFOS</h2>
+            <p class="p-trending">
+                Mira los últimos GIFOS de nuestra comunidad.  
+            </p>
+
+            <!-- carrusel trending-->
+            <div class="carrusel-trending"> 
+                <a class="anterior" id="anterior">&#10094;</a>
+
+                    <div class="carrusel" id="carrusel">
+                        <div class="carrusel-contenedor" id="carrusel-contenedor"></div>
+                    </div>
+
+                <a class="siguiente" id="siguiente">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- crear tu propio gif-->
+        <section class="crear-gifs" id="crear-gifs">
+            <div class="creargif">
+                <div class="camara">
+                    <img src="./assets/camara.svg" alt="camara" id="camara">
+                    <img src="./assets/Path 2.svg" alt="efecto de la camara" id="path">
+                </div>
+                <div class="contenido" >
+                    <div class="caja1"></div>
+                    <div class="caja2"></div>
+                    <div class="caja3"></div>
+                    <div class="caja4"></div>
+                    <div class="subir-gifo">
+                        <h2 class="h2-crear-gif" id="h2-crear-gif">
+                            Aquí podrás <br/>
+                            crear tus propios <span>GIFOS</span>
+                        </h2>
+                        <p class="text" id="p-">
+                            ¡Crea tu GIFO en solo 3 pasos! <br />
+                            (solo necesitas una cámara para grabar un video)
+                          </p>
+
+                          <div class="grabar" id=" grabar">
+                              <div class="btns-gif" id="btns-gif">
+
+                              </div>
+                              <div class="info" id="info">
+                                  <img src="./assets/loader.svg" alt="cargando gifo" class="icono-cargando" id="icono-cargando">
+                                  <p class="p-subir-gifo" id="p-subir-gifo">
+                                    Estamos subiendo tu GIFO
+                                  </p>
+                              </div>
+                      
+                        </div>
+                          <video src="" class="grabacion-video" id="grabacion-video"></video>
+                          <img src="" alt="" id="gifo-grabado">
+                        </div>
+              
+            </div>
+                <div class="vacio"></div>
+            </div>
+            <div class="crear-controles">
+                <div class="vacio"></div>
+                <div class="controles">
+                    <div class="btn-subir">
+                        <p class="partes" id="partes">1</p>
+                        <p class="partes" id="partes">2</p>
+                        <p class="partes" id="partes">3</p>
+                    </div>
+                    <div class="contador">
+                        <p class="p-contador" id="p-contador">0:00:00</p>
+                        <button class="repetir-captura" id="repetir-captura">
+                            Repetir captura
+                        </button>
+                    </div>
+                    <div class="div-subir"></div>
+                    <a href="#" id="btn-comenzar" class="btn">Comenzar</a>
+                    <a href="#" id="btn-grabar" class="btn">Grabar</a>
+                    <a href="#" id="btn-finalizar" class="btn">Finalizar</a>
+                    <a href="#" id="btn-dubir-gifos" class="btn">Subir Gifo</a>
+                </div>
+                <div class="rollo-filmar">
+                <img src="./assets/pelicula.svg" alt="rollo-de-pelicula" id="rollo-de-pelicula">      
+                </div>
+            </div>
+        </section> 
+    </main>
+    <footer >
+       <div class="social">
+        <p class="p-social"> Compartir en:</p>
+        <div class="iconos-social">
+            <a href="https://www.facebook.com/">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+       </div>
+       <p class="p-copyright">© GIFOS 2020 — All Rights Reserved</p>
+    </footer>
+    <script src="./scripts/burger.js"></script>
+    <script src="./scripts/buscador.js"></script>
+</body>
+</html>

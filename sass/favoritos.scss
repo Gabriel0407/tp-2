@@ -1,0 +1,11 @@
+.favoritos{
+    display: none;
+    text-align: center;
+    margin-top: 125px;
+    .h2-favoritos{
+        color: $color-principal;
+        font-family:'Montserrat', sans-serif ;
+        font-size: 20px;
+        margin: 10px auto 46px auto;
+    }
+}
