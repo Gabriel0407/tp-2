@@ -14,6 +14,7 @@ const sectionCrear = document.getElementById("crear-gifs");
 let cuerpo ="dia";
 let over = "no";
 
+
 /*modo noche*/
 modoND.addEventListener("click",()=>{
    body.classList.toggle('dark');

@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$color-principal".
-        on line 6 of C:\Users\sujeto\Desktop\gifos2.0\sass\favoritos.scss
+        on line 6 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\favoritos.scss
 
 1: .favoritos{
 2:     display: none;
@@ -15,7 +15,7 @@ Error: Undefined variable: "$color-principal".
 11: }
 
 Backtrace:
-C:\Users\sujeto\Desktop\gifos2.0\sass\favoritos.scss:6
+C:\Users\sujeto\Desktop\tp-2\tp-2\sass\favoritos.scss:6
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -73,4 +73,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-principal\".\A         on line 6 of C:\Users\sujeto\Desktop\gifos2.0\sass\favoritos.scss\A \A 1: .favoritos{\A 2:     display: none;\A 3:     text-align: center;\A 4:     margin-top: 125px;\A 5:     .h2-favoritos{\A 6:         color: $color-principal;\A 7:         font-family:'Montserrat', sans-serif ;\A 8:         font-size: 20px;\A 9:         margin: 10px auto 46px auto;\A 10:     }\A 11: }"; }
+  content: "Error: Undefined variable: \"$color-principal\".\A         on line 6 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\favoritos.scss\A \A 1: .favoritos{\A 2:     display: none;\A 3:     text-align: center;\A 4:     margin-top: 125px;\A 5:     .h2-favoritos{\A 6:         color: $color-principal;\A 7:         font-family:'Montserrat', sans-serif ;\A 8:         font-size: 20px;\A 9:         margin: 10px auto 46px auto;\A 10:     }\A 11: }"; }

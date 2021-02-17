@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$background-trending".
-        on line 5 of C:\Users\sujeto\Desktop\gifos2.0\sass\trending.scss
+        on line 5 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\trending.scss
 
 1: .trending{
 2:   
@@ -14,7 +14,7 @@ Error: Undefined variable: "$background-trending".
 10:             color: $color-light;
 
 Backtrace:
-C:\Users\sujeto\Desktop\gifos2.0\sass\trending.scss:5
+C:\Users\sujeto\Desktop\tp-2\tp-2\sass\trending.scss:5
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -61,4 +61,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$background-trending\".\A         on line 5 of C:\Users\sujeto\Desktop\gifos2.0\sass\trending.scss\A \A 1: .trending{\A 2:   \A 3:     width: 100%;\A 4:     height: 430px;\A 5:     background-color: $background-trending;\A 6:     text-align: center;\A 7:     body.dark &{\A 8:         background-color: $color-dark-gray-trending;\A 9:         .h2-trending{\A 10:             color: $color-light;"; }
+  content: "Error: Undefined variable: \"$background-trending\".\A         on line 5 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\trending.scss\A \A 1: .trending{\A 2:   \A 3:     width: 100%;\A 4:     height: 430px;\A 5:     background-color: $background-trending;\A 6:     text-align: center;\A 7:     body.dark &{\A 8:         background-color: $color-dark-gray-trending;\A 9:         .h2-trending{\A 10:             color: $color-light;"; }

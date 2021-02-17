@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$color-gray".
-        on line 13 of C:\Users\sujeto\Desktop\gifos2.0\sass\footer.scss
+        on line 13 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\footer.scss
 
 8:         font-family: 'Roboto', sans-serif;
 9:       }
@@ -15,7 +15,7 @@ Error: Undefined variable: "$color-gray".
 18:        
 
 Backtrace:
-C:\Users\sujeto\Desktop\gifos2.0\sass\footer.scss:13
+C:\Users\sujeto\Desktop\tp-2\tp-2\sass\footer.scss:13
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -95,4 +95,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-gray\".\A         on line 13 of C:\Users\sujeto\Desktop\gifos2.0\sass\footer.scss\A \A 8:         font-family: 'Roboto', sans-serif;\A 9:       }\A 10:       .iconos-social{\A 11:           a{\A 12:                margin: 0px 9.5px;\A 13:              color: $color-gray;\A 14:           }\A 15:      }\A 16:     }\A 17:       .p-copyright{\A 18:        "; }
+  content: "Error: Undefined variable: \"$color-gray\".\A         on line 13 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\footer.scss\A \A 8:         font-family: 'Roboto', sans-serif;\A 9:       }\A 10:       .iconos-social{\A 11:           a{\A 12:                margin: 0px 9.5px;\A 13:              color: $color-gray;\A 14:           }\A 15:      }\A 16:     }\A 17:       .p-copyright{\A 18:        "; }

@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color-secundario".
-        on line 15 of C:\Users\sujeto\Desktop\gifos2.0\sass\general.scss
+        on line 17 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\general.scss
 
-10:    ul{ list-style: none;}
-11:    a{
-12:     text-decoration: none;
-13:    } 
-14:    span{
-15:        color: $color-secundario;
-16:    }
-17:    
-18:    &.dark{
-19:        background:$color-dark-gray;
-20:    }
+12:    ul{ list-style: none;}
+13:    a{
+14:     text-decoration: none;
+15:    } 
+16:    span{
+17:        color: $color-secundario;
+18:    }
+19:    
+20:    &.dark{
+21:        background:$color-dark-gray;
+22:    }
 
 Backtrace:
-C:\Users\sujeto\Desktop\gifos2.0\sass\general.scss:15
+C:\Users\sujeto\Desktop\tp-2\tp-2\sass\general.scss:17
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -73,4 +73,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-secundario\".\A         on line 15 of C:\Users\sujeto\Desktop\gifos2.0\sass\general.scss\A \A 10:    ul{ list-style: none;}\A 11:    a{\A 12:     text-decoration: none;\A 13:    } \A 14:    span{\A 15:        color: $color-secundario;\A 16:    }\A 17:    \A 18:    &.dark{\A 19:        background:$color-dark-gray;\A 20:    }"; }
+  content: "Error: Undefined variable: \"$color-secundario\".\A         on line 17 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\general.scss\A \A 12:    ul{ list-style: none;}\A 13:    a{\A 14:     text-decoration: none;\A 15:    } \A 16:    span{\A 17:        color: $color-secundario;\A 18:    }\A 19:    \A 20:    &.dark{\A 21:        background:$color-dark-gray;\A 22:    }"; }
