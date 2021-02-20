@@ -32,13 +32,9 @@ verMas.addEventListener("mouseout",()=>{
   searchForm.addEventListener('submit', function(e){
         e.preventDefault()
         let valor = input.value;
-        
-        btnVerMas.style.display="block";
-        linea.style.display="block";
 
-        /*titulo de lo buscado */
-        h2Resultado.textContent=input.value;
-        buscarGif(valor);
+      
+        buscarGif(valor,offset);
        
     });
 
@@ -55,7 +51,7 @@ verMas.addEventListener("mouseout",()=>{
 
 
 
-function buscarGif(link,limite){
+ function buscarGif(link,limite){
     const url =`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${link}&limit=12&offset=${limite}`;
     fetch(url)
     .then(function(res){
@@ -80,6 +76,13 @@ function buscarGif(link,limite){
     .catch(function(err){
         console.log(err);
     })
+    
+    btnVerMas.style.display="block";
+    linea.style.display="block";
+
+    /*titulo de lo buscado */
+    
+    h2Resultado.textContent=input.value;
 
 }
 
