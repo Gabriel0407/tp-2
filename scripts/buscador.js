@@ -28,20 +28,30 @@ verMas.addEventListener("mouseout",()=>{
 })
 
 /*obtener informacion del API*/
+/*evento al buscar*/
   searchForm.addEventListener('submit', function(e){
         e.preventDefault()
         let valor = input.value;
+      
         buscarGif(valor);
-    
        
     });
 
+/* btn ver mas*/
+    verMas.addEventListener("click", (e)=>{
+        e.preventDefault()
+        offset+=12;
+        let valor = input.value;
+       
+        buscarGif(valor,offset)
+        
+    })
 
 
-function buscarGif(valor){
-    const url =`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${valor}&limit=12`;
-    
 
+
+function buscarGif(link,limite){
+    const url =`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${link}&limit=12&offset=${limite}`;
     fetch(url)
     .then(function(res){
         return res.json()
@@ -52,6 +62,7 @@ function buscarGif(valor){
         json.data.forEach(function(obj){
             /*crear los lementos del gif */
             
+            const gif =obj.images.fixed_width.url;
             let gifs = document.createElement("img");
             gifs.setAttribute("src",gif);
             gifs.setAttribute("class","tamano-gif");
@@ -66,7 +77,7 @@ function buscarGif(valor){
         
     })
     .catch(function(err){
-        console.log(err.message);
+        console.log(err);
     })
 
 }
@@ -89,14 +100,6 @@ btnBuscadorDerecha.addEventListener("click",()=>{
 });
 
 
-/*funcion para generar los objetos del gif */
-function crearEstructuraGif(){
-    let pTopicos = document.createElement("p");
-        pTopicos.setAttribute("class","p-topicos");
-        pTopicos.setAttribute("id",`p-topicos${i}`);
-        pTopicos.textContent =res3[i];
-        topicos.appendChild(pTopicos);
-}
 /*trending*/
 
 const urlTopics = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}&limit=5&offset=5`;
@@ -106,8 +109,12 @@ fetch(urlTopics)
 
     let res3 = res2.data;
     for(let i = 0;i<=4;i++){
-        console.log(res3[i]);
-        crearEstructuraGif();
+      
+        let pTopicos = document.createElement("p");
+        pTopicos.setAttribute("class","p-topicos");
+        pTopicos.setAttribute("id",`p-topicos${i}`);
+        pTopicos.textContent =res3[i];
+        topicos.appendChild(pTopicos);
     }
     
 
@@ -117,30 +124,9 @@ fetch(urlTopics)
 })
 
 /*ver mas  */
-    verMas.addEventListener("click", (e)=>{
-       e.preventDefault();
-       offset+=12;
+    
+      
      
-       let valor = input.value;
-       const url =`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${valor}&limit=${limite}&offset=${offset}`;
-       fetch(url)
-       .then(res => res.json())
-       .then(res2 => {
-     
-
-        res2.data.forEach(function(obj){
-            console.log(obj);
-            const gif =obj.images.fixed_width.url;
-            let gifs = document.createElement("img");
-            gifs.setAttribute("src",gif);
-            gifs.setAttribute("class","tamano-gif");
-            contenedor.appendChild(gifs);
-        })
-        
-        
-       })
-     
-    })
-
+    
   
 
