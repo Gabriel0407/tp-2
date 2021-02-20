@@ -11,6 +11,7 @@ const sectionBuscador = document.getElementById("buscador");
 const sectionFav = document.getElementById("favoritos");
 const sectionGifos = document.getElementById("mis-gifos-sec");
 const sectionCrear = document.getElementById("crear-gifs");
+
 let cuerpo ="dia";
 let over = "no";
 
@@ -124,6 +125,7 @@ function click(elemento,funcion,obj1,obj2,obj3,obj4){
      
    })
 }
+
 click(logoHome,"click",sectionBuscador,sectionFav,sectionGifos,sectionCrear);
 click(favoritos,"click",sectionFav,sectionBuscador,sectionGifos,sectionCrear);
 click(misGifos,"click",sectionGifos,sectionBuscador,sectionFav,sectionCrear);

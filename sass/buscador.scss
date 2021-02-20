@@ -35,7 +35,7 @@
       width: 300px;
       margin: auto;
       border-radius: 15px;
-      height: 30px;
+      
       margin-top: -4px;
       display: flex;
       justify-content: space-between;
@@ -144,11 +144,12 @@
   .contenedor-gifs {
     margin-top: 40px;
     padding-bottom: 75px;
-    .tamano-gif {
-      width: 140px;
+      .tamano-gif{
+        width: 140px;
       height: 120px;
       margin: 10px 5px;
-    }
+      }
+    
   }
  
   .titulo-resultado{
@@ -187,7 +188,7 @@
     .container-buscador {
       .form-buscador {
         width: 38%;
-        height: 45px;
+      
         border-radius: 25px;
 
         .btn-buscador {
@@ -204,6 +205,7 @@
         .btn-buscar-derecha {
           font-size: 20px;
           margin-top: 12px;
+          padding-bottom:10px ;
           margin-right:10px ;
         }
       }
@@ -215,6 +217,11 @@
         width: 240px;
         height: 200px;
         margin: 10px 5px;
+        z-index: 1;
+      
+        .efecto-over{
+    
+        }
       }
     }
     .linea{

@@ -1,8 +1,9 @@
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
 const carrusel = document.getElementById("carrusel");
-var scrollperclick;
-var imagePadding =20;
+const carruselTrending = document.getElementById("carrusel-trending");
+
+let direction;
 
 function overOut(elemento,evento){
     if (evento == "mouseover") {
@@ -21,8 +22,17 @@ overOut(siguiente,"mouseout");
 overOut(siguiente,"mouseover");
 
 /*carrusel*/
+/*flechas*/
+siguiente.addEventListener("click",()=>{
+    carrusel.scrollLeft +=400;
 
+})
 
+anterior.addEventListener("click",()=>{
+    carrusel.scrollLeft -= 400;
+})
+
+/*trae del api */
     let limit =45;
     
  const urlTrending =`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}`

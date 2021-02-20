@@ -133,7 +133,6 @@ header {
     width: 300px;
     margin: auto;
     border-radius: 15px;
-    height: 30px;
     margin-top: -4px;
     display: flex;
     justify-content: space-between; }
@@ -244,7 +243,6 @@ header {
     width: 25%; }
   .buscador .container-buscador .form-buscador {
     width: 38%;
-    height: 45px;
     border-radius: 25px; }
     .buscador .container-buscador .form-buscador .btn-buscador {
       font-size: 20px;
@@ -257,13 +255,15 @@ header {
     .buscador .container-buscador .form-buscador .btn-buscar-derecha {
       font-size: 20px;
       margin-top: 12px;
+      padding-bottom: 10px;
       margin-right: 10px; }
   .buscador .contenedor-gifs {
     width: 1000px; }
     .buscador .contenedor-gifs .tamano-gif {
       width: 240px;
       height: 200px;
-      margin: 10px 5px; }
+      margin: 10px 5px;
+      z-index: 1; }
   .buscador .linea {
     width: 25%; }
   .buscador .titulo-resultado {

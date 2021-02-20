@@ -50,8 +50,8 @@ function buscarGif(valor){
         
 
         json.data.forEach(function(obj){
-            console.log(obj);
-            const gif =obj.images.fixed_height.url;
+            /*crear los lementos del gif */
+            
             let gifs = document.createElement("img");
             gifs.setAttribute("src",gif);
             gifs.setAttribute("class","tamano-gif");
@@ -70,6 +70,7 @@ function buscarGif(valor){
     })
 
 }
+
 /* sugerencia*/
 input.addEventListener("click",()=>{
    
@@ -88,6 +89,14 @@ btnBuscadorDerecha.addEventListener("click",()=>{
 });
 
 
+/*funcion para generar los objetos del gif */
+function crearEstructuraGif(){
+    let pTopicos = document.createElement("p");
+        pTopicos.setAttribute("class","p-topicos");
+        pTopicos.setAttribute("id",`p-topicos${i}`);
+        pTopicos.textContent =res3[i];
+        topicos.appendChild(pTopicos);
+}
 /*trending*/
 
 const urlTopics = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}&limit=5&offset=5`;
@@ -98,11 +107,7 @@ fetch(urlTopics)
     let res3 = res2.data;
     for(let i = 0;i<=4;i++){
         console.log(res3[i]);
-        let pTopicos = document.createElement("p");
-        pTopicos.setAttribute("class","p-topicos");
-        pTopicos.setAttribute("id",`p-topicos${i}`);
-        pTopicos.textContent =res3[i];
-        topicos.appendChild(pTopicos);
+        crearEstructuraGif();
     }
     
 
@@ -131,8 +136,6 @@ fetch(urlTopics)
             gifs.setAttribute("class","tamano-gif");
             contenedor.appendChild(gifs);
         })
-       
-    
         
         
        })
