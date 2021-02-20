@@ -32,7 +32,12 @@ verMas.addEventListener("mouseout",()=>{
   searchForm.addEventListener('submit', function(e){
         e.preventDefault()
         let valor = input.value;
-      
+        
+        btnVerMas.style.display="block";
+        linea.style.display="block";
+
+        /*titulo de lo buscado */
+        h2Resultado.textContent=input.value;
         buscarGif(valor);
        
     });
@@ -69,11 +74,7 @@ function buscarGif(link,limite){
             contenedor.appendChild(gifs);
         })
       
-        btnVerMas.style.display="block";
-        linea.style.display="block";
-
-        /*titulo de lo buscado */
-        h2Resultado.textContent=input.value;
+        
         
     })
     .catch(function(err){
@@ -127,6 +128,3 @@ fetch(urlTopics)
     
       
      
-    
-  
-
