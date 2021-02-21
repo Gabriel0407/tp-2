@@ -42,7 +42,7 @@ anterior.addEventListener("click",()=>{
     .then(function(json){
 
         json.data.forEach(function(obj){
-            console.log(obj)
+            
             const gifTrending =obj.images.original.url;
             let gifsTrending = document.createElement("img");
             gifsTrending.setAttribute("src",gifTrending);

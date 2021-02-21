@@ -21,7 +21,7 @@ let  offset = 0;
 
 verMas.addEventListener("mouseover",()=>{
     verMas.classList.add("efecto-vermas");
-    console.log("dea")
+   
 });
 verMas.addEventListener("mouseout",()=>{
     verMas.classList.remove("efecto-vermas");
@@ -33,7 +33,7 @@ verMas.addEventListener("mouseout",()=>{
         e.preventDefault()
         let valor = input.value;
 
-      
+        let  offset = 0;
         buscarGif(valor,offset);
        
     });
@@ -65,13 +65,45 @@ verMas.addEventListener("mouseout",()=>{
             
             const gif =obj.images.fixed_width.url;
             let gifs = document.createElement("img");
-            gifs.setAttribute("src",gif);
-            gifs.setAttribute("class","tamano-gif");
-            contenedor.appendChild(gifs);
+            gifs.setAttribute("src",gif,"class","gifs","id","gifsOver");
+    
+            let btnFav =document.createElement("div");
+            let btnExpandir = document.createElement("div");
+            let btnDescargar = document.createElement("div");
+            let divMadre = document.createElement("div");
+            let divBtn = document.createElement("div");
+            let divImg = document.createElement("div");
+            divImg.setAttribute("class","div-img",);
+            divBtn.setAttribute("class","contenedor-botones");
+            divMadre.setAttribute("class","tamano-gif","id","tamano-gif");
+            btnFav.setAttribute("class","far fa-heart btn-gif","id","btn-fav");
+            btnDescargar.setAttribute("class","fas fa-arrow-down btn-gif","id","btn-descargar");
+            btnExpandir.setAttribute("class","fas fa-expand-alt btn-gif","id","btn-exp");
+            divBtn.appendChild(btnFav);
+            divBtn.appendChild(btnExpandir);
+            divBtn.appendChild(btnDescargar);
+            divMadre.appendChild(divBtn);
+            divMadre.appendChild(gifs);
+            divMadre.appendChild(divImg);
+            contenedor.appendChild(divMadre);
+
+                /*EVENTO OVER    */
+            divMadre.addEventListener("mouseover",()=>{
+               divBtn.style.display="block";
+               divImg.style.display="block"; 
+
+              })
+              divMadre.addEventListener("mouseout",()=>{
+                divBtn.style.display="none";
+                divImg.style.display="none"; 
+ 
+               })
         })
       
         
         
+         
+          
     })
     .catch(function(err){
         console.log(err);
@@ -86,22 +118,23 @@ verMas.addEventListener("mouseout",()=>{
 
 }
 
+
+
+
 /* sugerencia*/
-input.addEventListener("click",()=>{
+
+function togleBuscador(elemento,remove,add,visibilidad){
+    elemento.addEventListener("click",()=>{
    
-        btnIcon.classList.remove("fa-search");
-        btnIcon.classList.add("fa-times");
-        btnBuscador.style.display="block";
+        btnIcon.classList.remove(remove);
+        btnIcon.classList.add(add);
+        btnBuscador.style.display=visibilidad;
   
-        
-});
+    })
+}
 
-
-btnBuscadorDerecha.addEventListener("click",()=>{
-    btnIcon.classList.add("fa-search");
-    btnIcon.classList.remove("fa-times");
-    btnBuscador.style.display="none";
-});
+togleBuscador(input,"fa-search","fa-times","block");
+togleBuscador(btnBuscadorDerecha,"fa-times","fa-search","none");
 
 
 /*trending*/

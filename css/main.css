@@ -16,6 +16,7 @@ body.dark {
   background: #37383C; }
 
 header {
+  z-index: 10;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -214,11 +215,24 @@ header {
     color: #FFFFFF; }
   .buscador .contenedor-gifs {
     margin-top: 40px;
-    padding-bottom: 75px; }
+    padding-bottom: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; }
     .buscador .contenedor-gifs .tamano-gif {
+      z-index: 100000;
       width: 140px;
       height: 120px;
       margin: 10px 5px; }
+      .buscador .contenedor-gifs .tamano-gif .gifs {
+        width: 100%;
+        height: 100%;
+        z-index: 2; }
+      .buscador .contenedor-gifs .tamano-gif .div-img {
+        display: none; }
+      .buscador .contenedor-gifs .tamano-gif .contenedor-botones {
+        display: none; }
   .buscador .titulo-resultado {
     color: #572EE5;
     font-size: 25px;
@@ -264,6 +278,33 @@ header {
       height: 200px;
       margin: 10px 5px;
       z-index: 1; }
+      .buscador .contenedor-gifs .tamano-gif .div-img {
+        width: 240px;
+        margin-top: -204px;
+        height: 200px;
+        z-index: 3;
+        opacity: 60%;
+        position: absolute;
+        background-color: #572EE5; }
+      .buscador .contenedor-gifs .tamano-gif .contenedor-botones {
+        z-index: 4;
+        position: absolute;
+        margin-left: 118px;
+        width: 115px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        display: none; }
+        .buscador .contenedor-gifs .tamano-gif .contenedor-botones .btn-gif {
+          opacity: 75%;
+          width: 32px;
+          height: 32px;
+          padding: 8px;
+          margin-left: 5px;
+          border-radius: 5px;
+          background-color: #FFFFFF; }
+          .buscador .contenedor-gifs .tamano-gif .contenedor-botones .btn-gif:hover {
+            opacity: 100%; }
   .buscador .linea {
     width: 25%; }
   .buscador .titulo-resultado {
