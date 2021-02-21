@@ -221,7 +221,6 @@ header {
     width: 100%;
     justify-content: center; }
     .buscador .contenedor-gifs .tamano-gif {
-      z-index: 100000;
       width: 140px;
       height: 120px;
       margin: 10px 5px; }

@@ -65,8 +65,8 @@ verMas.addEventListener("mouseout",()=>{
             
             const gif =obj.images.fixed_width.url;
             let gifs = document.createElement("img");
-            gifs.setAttribute("src",gif,"class","gifs","id","gifsOver");
-    
+            gifs.setAttribute("src",gif);
+            gifs.setAttribute("class","gifs","id","gifsOver");
             let btnFav =document.createElement("div");
             let btnExpandir = document.createElement("div");
             let btnDescargar = document.createElement("div");
@@ -86,7 +86,6 @@ verMas.addEventListener("mouseout",()=>{
             divMadre.appendChild(gifs);
             divMadre.appendChild(divImg);
             contenedor.appendChild(divMadre);
-
                 /*EVENTO OVER    */
             divMadre.addEventListener("mouseover",()=>{
                divBtn.style.display="block";

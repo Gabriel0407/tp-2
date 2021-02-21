@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,SAAS;EACT,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,MAAM;EAClB,YAAE;IAEE,KAAK,EAAE,KAAK;IACZ,MAAM,EAAE,mBAAmB;IAC3B,SAAS,EAAE,IAAI;IACf,WAAW,EAAE,wBAAwB;EAGzC,uBAAa;IACT,KAAK,EAAE,KAAK;EAKhB,0DAAa;IACT,MAAM,EAAC,IAAI;IACX,OAAO,EAAE,IAAI",
-"sources": ["../sass/buscador.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "buscador.css"
 }
