@@ -154,8 +154,8 @@
       height: 120px;
       margin: 10px 5px;
       .gifs{
-        width: 100%;
-        height: 100%;
+        width: 140px;
+        height: 120px;
         z-index: 2;
         margin-top: -124px;
       }
@@ -173,6 +173,7 @@
        display: none;
        
       }
+      
       
       }
     
@@ -199,8 +200,18 @@
         width: 180px;
         height: 150px;
         margin: 10px 5px;
+        .gifs{
+          width: 180px;
+          height: 150px;
+        }
+        .btn-movil{
+          width: 180px;
+          height: 150px;
+          margin-top: -154px;
+        }
       }
     }
+    
   }
 }
 @media (min-width: 1024px) {
@@ -237,24 +248,83 @@
         }
       }
     }
+
+
+
     .contenedor-gifs {
       width: 1000px;
 
+      .tamano-gif-expandido{
+        transition:0.3s ease all ;
+       
+        margin: 0px 5px;
+        position: fixed;
+        cursor: pointer;
+        background: $color-light;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        .gifExpandido{
+          transition:0.5s ease all ;
+          width: 500px;
+          position: absolute;
+         height: 500px;
+         margin: auto;
+         left: 50%;
+         margin-left: -250px;
+         top: 50%;
+         margin-top: -250px;
+         }
+         .contenedor-botones-expandido{
+           color: #572ee5;
+          position: absolute;
+          bottom: 16%;
+          font-size: 20px;
+          width: 130px;
+          margin-left: 59%;
+          .fas{
+            border: 1px solid $color-principal;
+            border-radius:10px ;
+            padding: 10px;
+            margin-left: 10px;
+          }
+           
+         }
+         .cerrar-btn{
+          width: 100px;
+          z-index: 12;
+          margin-left: 70%;
+         font-size: 20px;
+          margin-top: 10%;
+         }
+        }
+    
       .tamano-gif {
         width: 240px;
         height: 200px;
         margin: 10px 5px;
         z-index: 0;
         cursor: pointer;
+        transition:0.01s ease all ;
       &:hover > .div-img{
         display: block;
       }
        &:hover > .contenedor-botones{
          display: block;
        }
+     
+        .cerrar-btn{
+          display: none;
+        }
        
+        .gifs{
+          transition:0.01s ease all ;
+          width: 240px;
+          height: 200px;
+          margin-top: 0px;
+        }
         .div-img{
-         
+          transition:5s ease all ;
           width: 240px;
           margin-top: -204px;
           height: 200px;
@@ -273,11 +343,10 @@
           position: absolute;
           margin-left: 118px;
           width: 115px;
-          margin-top: -116px;
-          display: flex;
+          margin-top: 10px;
           align-items: center;
           display: none;
-
+          
           .btn-gif{
             opacity: 75%;
             width: 32px;
@@ -293,6 +362,7 @@
         }
       }
     }
+
     .linea{
       width: 25%;
     }

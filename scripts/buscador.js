@@ -64,23 +64,50 @@ function buscarGif(link, limite) {
         let divBtn = document.createElement("div");
         let divImg = document.createElement("div");
         let btnMovil = document.createElement("div");
-        btnMovil.setAttribute("class","btn-movil","id");
+        let nombreGif = document.createElement("div");
+        let cerrar =document.createElement("div")
+        cerrar.setAttribute("class","fas fa-times cerrar-btn");
+        nombreGif.setAttribute("class","nombre-gif");
+        btnMovil.setAttribute("class","btn-movil");
         divImg.setAttribute("class", "div-img");
         divBtn.setAttribute("class", "contenedor-botones");
-        divMadre.setAttribute("class", "tamano-gif", "id", "tamano-gif");
-        btnFav.setAttribute("class", "far fa-heart btn-gif", "id", "btn-fav");
-        btnDescargar.setAttribute("class","fas fa-arrow-down btn-gif","id","btn-descargar");
-        btnExpandir.setAttribute("class","fas fa-expand-alt btn-gif","id","btn-exp");
+        divMadre.setAttribute("class", "tamano-gif");
+        btnFav.setAttribute("class", "far fa-heart btn-gif");
+        btnDescargar.setAttribute("class","fas fa-arrow-down btn-gif");
+        btnExpandir.setAttribute("class","fas fa-expand-alt btn-gif");
+      
         divBtn.appendChild(btnFav);
         divBtn.appendChild(btnExpandir);
         divBtn.appendChild(btnDescargar);
+        divMadre.appendChild(cerrar);
+        divMadre.appendChild(nombreGif);
         divMadre.appendChild(divBtn);
         divMadre.appendChild(gifs);
         divMadre.appendChild(btnMovil);
         divMadre.appendChild(divImg);
         contenedor.appendChild(divMadre);
      
-      });
+
+        function expandirContraer(elemento,add1,remove2,add2,remove2,add3,remove3,add4,remove4,style1,style2,style3){
+          elemento.addEventListener("click",()=>{
+          gifs.classList.add(add1);
+          gifs.classList.remove(remove2);
+          divMadre.classList.add(add2);
+          divMadre.classList.remove(remove2);
+          divImg.classList.add(add3);
+          divImg.classList.remove(remove3);
+          divBtn.classList.add(add4);
+          divBtn.classList.remove(remove4);
+          divMadre.style.zIndex=style1;
+          cerrar.style.display=style2;
+          btnFav.style.visibility=style3;
+
+        })
+      }
+      
+      expandirContraer(btnExpandir,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
+      expandirContraer(cerrar,"gifs","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
+    });
 
         
     })
