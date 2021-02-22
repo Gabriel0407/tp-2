@@ -53,11 +53,82 @@
             &::-webkit-scrollbar {
                 display: none;
               }
-            .gif-carrusel{
-                   width: 240px;
-                   height: 185px;
-                   margin: 0 10px;
+              .tamano-gif-expandido{
+                transition:0.3s ease all ;
+                background: $color-light;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                margin: 0px 5px;
+                position: fixed;
+                .gifExpandido{
+                  transition:0.3s ease all ;
+                  width: 250px;
+                  position: absolute;
+                 height: 259px;
+                 margin: auto;
+                 left: 50%;
+                 margin-left: -125px;
+                 top: 50%;
+                 margin-top: -125px;
+                 }
+                 .contenedor-botones-expandido{
+                  color: #572ee5;
+                 position: absolute;
+                 bottom: 16%;
+                 font-size: 20px;
+                 width: 130px;
+                 margin-left: 59%;
+                 .fas{
+                   border: 1px solid $color-principal;
+                   border-radius:10px ;
+                   padding: 10px;
+                   margin-left: 10px;
+                 }
+                  
+                }
+                .cerrar-btn{
+                  width: 100px;
+                  z-index: 12;
+                  margin-left: 70%;
+                 font-size: 20px;
+                  margin-top: 10%;
+                 }
             }
+              .tamano-gif{
+                transition:0.01s ease all ;
+                width: 375px;
+              height: 275px;
+              margin: 0px 5px;
+              .gifs{
+                transition:0.01s ease all ;
+                width: 240px;
+                height: 180px;
+                z-index: 2;
+                margin-top: 0;
+              }
+              .btn-movil{
+                position: absolute;
+                width: 240px;
+                height: 180px;
+                z-index: 5;
+                margin-top: 0px;
+              }
+              .cerrar-btn{
+                display: none;
+              }
+              .div-img{
+                display: none;
+              }
+              .contenedor-botones{
+               display: none;
+               
+              }
+              
+              
+              }
+            
         }
     }
 }
@@ -67,6 +138,8 @@
         .carrusel-trending{
             padding:0 10px 0 10px;
             font-size: 30px;
+            height: 300px;
+            align-items: center;
             color: $color-principal;
         
           .anterior{
@@ -94,13 +167,98 @@
                
                 width: 92%;
                 margin: auto;
-                height: 290px;
+                height: 300px;
                
-               .gif-carrusel{
-                   width: 357px;
-                   height: 275px;
+                .tamano-gif-expandido{  
+                    cursor: pointer;
+                 
+                    .gifExpandido{
+                      width: 500px;
+                     height: 500px;
+                     margin-left: -250px;
+                     margin-top: -250px;
+                     }
+                     .contenedor-botones-expandido{
+                      bottom: 16%;
+                      font-size: 20px;
+                      width: 130px;
+                      margin-left: 59%;
+                      .fas{
+                        border-radius:10px ;
+                        padding: 10px;
+                        margin-left: 10px;
+                      }
+                       
+                     }
+                     .cerrar-btn{
+                      width: 100px;
+                      margin-left: 70%;
+                     font-size: 20px;
+                      margin-top: 10%;
+                     }
+                    }
                 
-               }
+                  .tamano-gif {
+                    width: 300px;
+                    height: 270px;
+                    margin: 10px 5px;
+                    z-index: 0;
+                    cursor: pointer;
+                  &:hover > .div-img{
+                    display: block;
+                  }
+                   &:hover > .contenedor-botones{
+                     display: block;
+                   }
+                 
+                    .cerrar-btn{
+                      display: none;
+                    }
+                   
+                    .gifs{
+                      
+                      width: 300px;
+                      height: 270px;
+                      margin-top: 0px;
+                    }
+                    .div-img{
+                      transition:5s ease all ;
+                      width: 300px;
+                      margin-top: -278px;
+                      height: 270px;
+                      z-index: 3;
+                      opacity: 60%;
+                      position: absolute;
+                      background-color: $color-principal;
+                     
+                     
+                    }
+                    .btn-movil{
+                    display: none;
+                    }
+                    .contenedor-botones{
+                      z-index: 4;
+                      position: absolute;
+                      margin-left: 174px;
+                      width: 115px;
+                      margin-top: 10px;
+                      align-items: center;
+                      display: none;
+                      
+                      .btn-gif{
+                        opacity: 75%;
+                        width: 32px;
+                        height: 32px;
+                        padding:0px;
+                        margin-left: 5px;
+                        border-radius: 5px;
+                        background-color: $color-light;
+                        &:hover {
+                          opacity:100%;
+                        }
+                      }
+                    }
+                  }
             }
         }
     }

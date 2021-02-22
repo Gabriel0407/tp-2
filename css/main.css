@@ -497,10 +497,66 @@ header {
       white-space: nowrap; }
       .trending .carrusel-trending .carrusel::-webkit-scrollbar {
         display: none; }
-      .trending .carrusel-trending .carrusel .gif-carrusel {
-        width: 240px;
-        height: 185px;
-        margin: 0 10px; }
+      .trending .carrusel-trending .carrusel .tamano-gif-expandido {
+        transition: 0.3s ease all;
+        background: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0px 5px;
+        position: fixed; }
+        .trending .carrusel-trending .carrusel .tamano-gif-expandido .gifExpandido {
+          transition: 0.3s ease all;
+          width: 250px;
+          position: absolute;
+          height: 259px;
+          margin: auto;
+          left: 50%;
+          margin-left: -125px;
+          top: 50%;
+          margin-top: -125px; }
+        .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido {
+          color: #572ee5;
+          position: absolute;
+          bottom: 16%;
+          font-size: 20px;
+          width: 130px;
+          margin-left: 59%; }
+          .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido .fas {
+            border: 1px solid #572EE5;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 10px; }
+        .trending .carrusel-trending .carrusel .tamano-gif-expandido .cerrar-btn {
+          width: 100px;
+          z-index: 12;
+          margin-left: 70%;
+          font-size: 20px;
+          margin-top: 10%; }
+      .trending .carrusel-trending .carrusel .tamano-gif {
+        transition: 0.01s ease all;
+        width: 375px;
+        height: 275px;
+        margin: 0px 5px; }
+        .trending .carrusel-trending .carrusel .tamano-gif .gifs {
+          transition: 0.01s ease all;
+          width: 240px;
+          height: 180px;
+          z-index: 2;
+          margin-top: 0; }
+        .trending .carrusel-trending .carrusel .tamano-gif .btn-movil {
+          position: absolute;
+          width: 240px;
+          height: 180px;
+          z-index: 5;
+          margin-top: 0px; }
+        .trending .carrusel-trending .carrusel .tamano-gif .cerrar-btn {
+          display: none; }
+        .trending .carrusel-trending .carrusel .tamano-gif .div-img {
+          display: none; }
+        .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones {
+          display: none; }
 
 @media (min-width: 1024px) {
   .trending {
@@ -508,6 +564,8 @@ header {
     .trending .carrusel-trending {
       padding: 0 10px 0 10px;
       font-size: 30px;
+      height: 300px;
+      align-items: center;
       color: #572EE5; }
       .trending .carrusel-trending .anterior {
         padding: 8px 10px;
@@ -529,10 +587,73 @@ header {
         scroll-behavior: smooth;
         width: 92%;
         margin: auto;
-        height: 290px; }
-        .trending .carrusel-trending .carrusel .gif-carrusel {
-          width: 357px;
-          height: 275px; } }
+        height: 300px; }
+        .trending .carrusel-trending .carrusel .tamano-gif-expandido {
+          cursor: pointer; }
+          .trending .carrusel-trending .carrusel .tamano-gif-expandido .gifExpandido {
+            width: 500px;
+            height: 500px;
+            margin-left: -250px;
+            margin-top: -250px; }
+          .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido {
+            bottom: 16%;
+            font-size: 20px;
+            width: 130px;
+            margin-left: 59%; }
+            .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido .fas {
+              border-radius: 10px;
+              padding: 10px;
+              margin-left: 10px; }
+          .trending .carrusel-trending .carrusel .tamano-gif-expandido .cerrar-btn {
+            width: 100px;
+            margin-left: 70%;
+            font-size: 20px;
+            margin-top: 10%; }
+        .trending .carrusel-trending .carrusel .tamano-gif {
+          width: 300px;
+          height: 270px;
+          margin: 10px 5px;
+          z-index: 0;
+          cursor: pointer; }
+          .trending .carrusel-trending .carrusel .tamano-gif:hover > .div-img {
+            display: block; }
+          .trending .carrusel-trending .carrusel .tamano-gif:hover > .contenedor-botones {
+            display: block; }
+          .trending .carrusel-trending .carrusel .tamano-gif .cerrar-btn {
+            display: none; }
+          .trending .carrusel-trending .carrusel .tamano-gif .gifs {
+            width: 300px;
+            height: 270px;
+            margin-top: 0px; }
+          .trending .carrusel-trending .carrusel .tamano-gif .div-img {
+            transition: 5s ease all;
+            width: 300px;
+            margin-top: -278px;
+            height: 270px;
+            z-index: 3;
+            opacity: 60%;
+            position: absolute;
+            background-color: #572EE5; }
+          .trending .carrusel-trending .carrusel .tamano-gif .btn-movil {
+            display: none; }
+          .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones {
+            z-index: 4;
+            position: absolute;
+            margin-left: 174px;
+            width: 115px;
+            margin-top: 10px;
+            align-items: center;
+            display: none; }
+            .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones .btn-gif {
+              opacity: 75%;
+              width: 32px;
+              height: 32px;
+              padding: 0px;
+              margin-left: 5px;
+              border-radius: 5px;
+              background-color: #FFFFFF; }
+              .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones .btn-gif:hover {
+                opacity: 100%; } }
 footer .social {
   text-align: center; }
   footer .social .p-social {

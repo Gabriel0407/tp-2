@@ -146,11 +146,11 @@ fetch(urlTopics)
     let res3 = res2.data;
     for (let i = 0; i <= 4; i++) {
       let pTopicos = document.createElement("p");
-      pTopicos.setAttribute("class", "p-topicos");
-      pTopicos.setAttribute("id", `p-topicos${i}`);
+      pTopicos.setAttribute("class", "p-topicos","id", `p-topicos${i}`);
       pTopicos.textContent = res3[i];
       topicos.appendChild(pTopicos);
     }
+
   })
   .catch(function (err) {
     console.log(err.message);
