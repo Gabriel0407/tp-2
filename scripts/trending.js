@@ -48,6 +48,7 @@ anterior.addEventListener("click",()=>{
             gifsTrending.setAttribute("src",gifTrending);
             gifsTrending.setAttribute("class","gif-carrusel");
             carrusel.appendChild(gifsTrending);
+            
         })
     })
 
