@@ -28,7 +28,7 @@ verMas.addEventListener("mouseout", () => {
 /*funcion vaciar el input y el contenedor de gifs */
    
 
-let madre = document.getElementById("tamano-gif")
+
 function togleBuscador(elemento, remove, add, visibilidad) {
   elemento.addEventListener("click", () => {
     btnIcon.classList.remove(remove);
@@ -133,24 +133,29 @@ function buscarGif(link, limite) {
       expandirContraer(cerrar,"gifs","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
       
     let contenido = input.value;
-    if(abierto == true){
+ 
       btnBuscadorDerecha.addEventListener("click",()=>{
+        if(abierto == true){
       contenedor.removeChild(divMadre);
        btnVerMas.style.display="none";
        linea.style.display = "none";
        h2Resultado.style.display ="none";
-      
+        }
       })
      input.addEventListener("keyup",(event)=>{
-      if(event.keycode == 8 || event.which === 8 && abierto == true){
+      if(event.keycode == 8 || event.which === 8  ){
+        if(abierto == true){
         input.value = "";
         contenedor.removeChild(divMadre);
         btnVerMas.style.display="none";
         linea.style.display = "none";
         h2Resultado.style.display ="none";
-       }
+        }
+      }
      })
-    }
+     
+    
+
     });
 
         

@@ -226,6 +226,7 @@ header {
       width: 100%;
       height: 100%;
       top: 0;
+      left: 0%;
       margin: 0px 5px;
       position: fixed; }
       body.dark .buscador .contenedor-gifs .tamano-gif-expandido {
@@ -234,7 +235,7 @@ header {
         transition: 0.3s ease all;
         width: 250px;
         position: absolute;
-        height: 259px;
+        height: 250px;
         margin: auto;
         left: 50%;
         margin-left: -125px;
@@ -481,6 +482,7 @@ header {
     font-family: 'Roboto', sans-serif; }
   .trending .carrusel-trending {
     margin-top: 30px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 250px;
@@ -504,8 +506,8 @@ header {
         background: #FFFFFF;
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
+        top: 0%;
+        left: 0%;
         margin: 0px 5px;
         position: fixed; }
         body.dark .trending .carrusel-trending .carrusel .tamano-gif-expandido {
@@ -514,7 +516,7 @@ header {
           transition: 0.3s ease all;
           width: 250px;
           position: absolute;
-          height: 259px;
+          height: 250px;
           margin: auto;
           left: 50%;
           margin-left: -125px;
