@@ -11,7 +11,7 @@ const contenedor = document.getElementById("contenedor-gifs");
 const btnVerMas = document.getElementById("btn-ver-mas");
 const searchForm = document.getElementById("form-buscador");
 const apiKey = "JTTuSKhX493w24cTE17cNArghwaQot2D";
-
+let abierto = false;
 let offset = 0;
 let limite = 12;
 
@@ -24,7 +24,29 @@ verMas.addEventListener("mouseout", () => {
   verMas.classList.remove("efecto-vermas");
 });
 
-/*obtener informacion del API*/
+
+/*funcion vaciar el input y el contenedor de gifs */
+   
+
+let madre = document.getElementById("tamano-gif")
+function togleBuscador(elemento, remove, add, visibilidad) {
+  elemento.addEventListener("click", () => {
+    btnIcon.classList.remove(remove);
+    btnIcon.classList.add(add);
+    btnBuscador.style.display = visibilidad;
+    if (elemento == input && abierto == false) {
+      abierto = true;
+    } else if (elemento == btnBuscadorDerecha && abierto == true) {
+      console.log("click");
+      input.value = "";
+      abierto = false;
+    }
+  });
+}
+
+togleBuscador(input, "fa-search", "fa-times", "block");
+togleBuscador(btnBuscadorDerecha, "fa-times", "fa-search", "none");
+
 /*evento al buscar*/
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -43,6 +65,7 @@ verMas.addEventListener("click", (e) => {
   buscarGif(valor, offset);
 });
 
+/*llamar a la api y crear mediante dom el gif y sus atributos */
 function buscarGif(link, limite) {
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${link}&limit=12&offset=${limite}`;
   fetch(url)
@@ -71,7 +94,7 @@ function buscarGif(link, limite) {
         btnMovil.setAttribute("class","btn-movil");
         divImg.setAttribute("class", "div-img");
         divBtn.setAttribute("class", "contenedor-botones");
-        divMadre.setAttribute("class", "tamano-gif");
+        divMadre.setAttribute("class", "tamano-gif","id", "tamano-gif");
         btnFav.setAttribute("class", "far fa-heart btn-gif");
         btnDescargar.setAttribute("class","fas fa-arrow-down btn-gif");
         btnExpandir.setAttribute("class","fas fa-expand-alt btn-gif");
@@ -87,6 +110,7 @@ function buscarGif(link, limite) {
         divMadre.appendChild(divImg);
         contenedor.appendChild(divMadre);
      
+     /*funcion para expandir y cerrar el gif */
 
         function expandirContraer(elemento,add1,remove2,add2,remove2,add3,remove3,add4,remove4,style1,style2,style3){
           elemento.addEventListener("click",()=>{
@@ -107,6 +131,26 @@ function buscarGif(link, limite) {
       expandirContraer(btnMovil,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
       expandirContraer(btnExpandir,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
       expandirContraer(cerrar,"gifs","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
+      
+    let contenido = input.value;
+    if(abierto == true){
+      btnBuscadorDerecha.addEventListener("click",()=>{
+      contenedor.removeChild(divMadre);
+       btnVerMas.style.display="none";
+       linea.style.display = "none";
+       h2Resultado.style.display ="none";
+      
+      })
+     input.addEventListener("keyup",(event)=>{
+      if(event.keycode == 8 || event.which === 8 && abierto == true){
+        input.value = "";
+        contenedor.removeChild(divMadre);
+        btnVerMas.style.display="none";
+        linea.style.display = "none";
+        h2Resultado.style.display ="none";
+       }
+     })
+    }
     });
 
         
@@ -116,26 +160,16 @@ function buscarGif(link, limite) {
       console.log(err);
     });
 
+    
+
   btnVerMas.style.display = "block";
   linea.style.display = "block";
 
   /*titulo de lo buscado */
-
+  h2Resultado.style.display ="block";
   h2Resultado.textContent = input.value;
 }
 
-/* sugerencia*/
-
-function togleBuscador(elemento, remove, add, visibilidad) {
-  elemento.addEventListener("click", () => {
-    btnIcon.classList.remove(remove);
-    btnIcon.classList.add(add);
-    btnBuscador.style.display = visibilidad;
-  });
-}
-
-togleBuscador(input, "fa-search", "fa-times", "block");
-togleBuscador(btnBuscadorDerecha, "fa-times", "fa-search", "none");
 
 /*trending*/
 
@@ -156,4 +190,7 @@ fetch(urlTopics)
     console.log(err.message);
   });
 
-/*ver mas  */
+  
+
+
+

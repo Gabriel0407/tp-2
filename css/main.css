@@ -228,6 +228,8 @@ header {
       top: 0;
       margin: 0px 5px;
       position: fixed; }
+      body.dark .buscador .contenedor-gifs .tamano-gif-expandido {
+        background-color: #222326; }
       .buscador .contenedor-gifs .tamano-gif-expandido .gifExpandido {
         transition: 0.3s ease all;
         width: 250px;
@@ -315,7 +317,7 @@ header {
     .buscador .container-buscador .form-buscador .btn-buscador {
       font-size: 20px;
       left: 0px;
-      margin-top: 12px; }
+      margin-top: 4px; }
     .buscador .container-buscador .form-buscador .input-buscador {
       font-size: 20px;
       padding: 6px 0px;
@@ -506,6 +508,8 @@ header {
         left: 0;
         margin: 0px 5px;
         position: fixed; }
+        body.dark .trending .carrusel-trending .carrusel .tamano-gif-expandido {
+          background-color: #222326; }
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .gifExpandido {
           transition: 0.3s ease all;
           width: 250px;
@@ -530,6 +534,7 @@ header {
             margin-left: 10px; }
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .cerrar-btn {
           width: 100px;
+          color: #572EE5;
           z-index: 12;
           margin-left: 70%;
           font-size: 20px;
