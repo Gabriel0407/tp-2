@@ -82,8 +82,8 @@ function buscarGif(link, limite) {
         divMadre.appendChild(cerrar);
         divMadre.appendChild(nombreGif);
         divMadre.appendChild(divBtn);
-        divMadre.appendChild(gifs);
         divMadre.appendChild(btnMovil);
+        divMadre.appendChild(gifs);
         divMadre.appendChild(divImg);
         contenedor.appendChild(divMadre);
      
@@ -104,7 +104,7 @@ function buscarGif(link, limite) {
 
         })
       }
-      
+      expandirContraer(btnMovil,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
       expandirContraer(btnExpandir,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
       expandirContraer(cerrar,"gifs","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
     });

@@ -49,7 +49,7 @@ header {
   header .menu-burger {
     margin: auto;
     position: absolute;
-    margin-top: 907px;
+    margin-top: 884px;
     width: 100%;
     background-color: #572EE5;
     opacity: 80%;
@@ -220,21 +220,61 @@ header {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center; }
+    .buscador .contenedor-gifs .tamano-gif-expandido {
+      transition: 0.3s ease all;
+      background: #FFFFFF;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      margin: 0px 5px;
+      position: fixed; }
+      .buscador .contenedor-gifs .tamano-gif-expandido .gifExpandido {
+        transition: 0.3s ease all;
+        width: 250px;
+        position: absolute;
+        height: 259px;
+        margin: auto;
+        left: 50%;
+        margin-left: -125px;
+        top: 50%;
+        margin-top: -125px; }
+      .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido {
+        color: #572ee5;
+        position: absolute;
+        bottom: 16%;
+        font-size: 20px;
+        width: 130px;
+        margin-left: 59%; }
+        .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido .fas {
+          border: 1px solid #572EE5;
+          border-radius: 10px;
+          padding: 10px;
+          margin-left: 10px; }
+      .buscador .contenedor-gifs .tamano-gif-expandido .cerrar-btn {
+        width: 100px;
+        z-index: 12;
+        margin-left: 70%;
+        font-size: 20px;
+        margin-top: 10%; }
     .buscador .contenedor-gifs .tamano-gif {
+      transition: 0.01s ease all;
       width: 140px;
       height: 120px;
       margin: 10px 5px; }
       .buscador .contenedor-gifs .tamano-gif .gifs {
+        transition: 0.01s ease all;
         width: 140px;
         height: 120px;
         z-index: 2;
-        margin-top: -124px; }
+        margin-top: 0; }
       .buscador .contenedor-gifs .tamano-gif .btn-movil {
         position: absolute;
         width: 140px;
         height: 120px;
-        z-index: 4;
-        margin-top: -124px; }
+        z-index: 5;
+        margin-top: 0px; }
+      .buscador .contenedor-gifs .tamano-gif .cerrar-btn {
+        display: none; }
       .buscador .contenedor-gifs .tamano-gif .div-img {
         display: none; }
       .buscador .contenedor-gifs .tamano-gif .contenedor-botones {
@@ -288,39 +328,23 @@ header {
   .buscador .contenedor-gifs {
     width: 1000px; }
     .buscador .contenedor-gifs .tamano-gif-expandido {
-      transition: 0.3s ease all;
-      margin: 0px 5px;
-      position: fixed;
-      cursor: pointer;
-      background: #FFFFFF;
-      width: 100%;
-      height: 100%;
-      top: 0; }
+      cursor: pointer; }
       .buscador .contenedor-gifs .tamano-gif-expandido .gifExpandido {
-        transition: 0.5s ease all;
         width: 500px;
-        position: absolute;
         height: 500px;
-        margin: auto;
-        left: 50%;
         margin-left: -250px;
-        top: 50%;
         margin-top: -250px; }
       .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido {
-        color: #572ee5;
-        position: absolute;
         bottom: 16%;
         font-size: 20px;
         width: 130px;
         margin-left: 59%; }
         .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido .fas {
-          border: 1px solid #572EE5;
           border-radius: 10px;
           padding: 10px;
           margin-left: 10px; }
       .buscador .contenedor-gifs .tamano-gif-expandido .cerrar-btn {
         width: 100px;
-        z-index: 12;
         margin-left: 70%;
         font-size: 20px;
         margin-top: 10%; }
@@ -329,8 +353,7 @@ header {
       height: 200px;
       margin: 10px 5px;
       z-index: 0;
-      cursor: pointer;
-      transition: 0.01s ease all; }
+      cursor: pointer; }
       .buscador .contenedor-gifs .tamano-gif:hover > .div-img {
         display: block; }
       .buscador .contenedor-gifs .tamano-gif:hover > .contenedor-botones {
@@ -338,7 +361,6 @@ header {
       .buscador .contenedor-gifs .tamano-gif .cerrar-btn {
         display: none; }
       .buscador .contenedor-gifs .tamano-gif .gifs {
-        transition: 0.01s ease all;
         width: 240px;
         height: 200px;
         margin-top: 0px; }
