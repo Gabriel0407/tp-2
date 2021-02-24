@@ -58,77 +58,73 @@
                 background: $color-light;
                 width: 100%;
                 height: 100%;
+                position: fixed;
                 top: 0%;
                 left: 0%;
-                
-                margin: 0px 5px;
-                position: fixed;
                 body.dark &{
                  background-color: $color-dark-gray-trending;    
                 }
                 .gifExpandido{
                   transition:0.3s ease all ;
                   width: 250px;
-                  position: absolute;
-                 height: 250px;
-                 margin: auto;
-                 left: 50%;
-                 margin-left: -125px;
-                 top: 50%;
-                 margin-top: -125px;
-                
-                 }
+                  height: 250px;
+                position: absolute;
+                  left: 50%;
+                  margin-left: -125px;
+                  top: 50%;
+                  margin-top: -125px;
+                }
                  .contenedor-botones-expandido{
                   color: #572ee5;
-                 position: absolute;
-                 bottom: 16%;
-                 font-size: 20px;
-                 width: 130px;
-                 margin-left: 59%;
+                  position: absolute;
+                  bottom: 29%;
+                  font-size: 20px;
+                  width: 130px;
+                  margin-left: 54%;
                  .fas{
-                   border: 1px solid $color-principal;
-                   border-radius:10px ;
-                   padding: 10px;
-                   margin-left: 10px;
+                  border: 1px solid $color-principal;
+                  border-radius:10px ;
+                  padding: 10px;
+                  margin-left: 10px;
                  }
                   
                 }
                 .cerrar-btn{
+                  color: #572ee5;
                   width: 100px;
-                  color: $color-principal;
                   z-index: 12;
-                  margin-left: 70%;
+                  margin-left: 76%;
                  font-size: 20px;
-                  margin-top: 10%;
+                  margin-top: 80%;
                  }
             }
               .tamano-gif{
-                transition:0.01s ease all ;
-                width: 375px;
-              height: 275px;
-              margin: 0px 5px;
+                transition:0.3s ease all ;
+              width:243px;
+              height: 187px;
+              margin: 0 10px;
               .gifs{
-                transition:0.01s ease all ;
-                width: 240px;
-                height: 180px;
-                z-index: 2;
-                margin-top: 0;
+                transition:0.3s ease all ;
+              width: 243px;
+              height: 187px;
+             position: relative;
+              margin-top: -172px;
               }
               .btn-movil{
-                position: absolute;
-                width: 240px;
-                height: 180px;
+                position: relative;
+               width: 243px;
+                height: 187px;
                 z-index: 5;
-                margin-top: 0px;
+                 margin-top: 0px;
               }
               .cerrar-btn{
                 display: none;
               }
               .div-img{
-                display: none;
+              display: none;
               }
               .contenedor-botones{
-               display: none;
+              display: none;
                
               }
               
@@ -176,31 +172,19 @@
                 height: 300px;
                
                 .tamano-gif-expandido{  
-                    cursor: pointer;
-                 
+                   
                     .gifExpandido{
-                      width: 500px;
-                     height: 500px;
-                     margin-left: -250px;
-                     margin-top: -250px;
+                  
                      }
                      .contenedor-botones-expandido{
-                      bottom: 16%;
-                      font-size: 20px;
-                      width: 130px;
-                      margin-left: 59%;
+                     
                       .fas{
-                        border-radius:10px ;
-                        padding: 10px;
-                        margin-left: 10px;
+                     
                       }
                        
                      }
                      .cerrar-btn{
-                      width: 100px;
-                      margin-left: 70%;
-                     font-size: 20px;
-                      margin-top: 10%;
+                    
                      }
                     }
                 

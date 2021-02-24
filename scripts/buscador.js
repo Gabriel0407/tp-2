@@ -75,7 +75,7 @@ function buscarGif(link, limite) {
     .then(function (json) {
       json.data.forEach(function (obj) {
         /*crear los lementos del gif */
-
+        
         const gif = obj.images.fixed_width.url;
         let gifs = document.createElement("img");
         gifs.setAttribute("src", gif);
@@ -109,6 +109,8 @@ function buscarGif(link, limite) {
         divMadre.appendChild(gifs);
         divMadre.appendChild(divImg);
         contenedor.appendChild(divMadre);
+
+        
      
      /*funcion para expandir y cerrar el gif */
 
@@ -124,24 +126,25 @@ function buscarGif(link, limite) {
           divBtn.classList.remove(remove4);
           divMadre.style.zIndex=style1;
           cerrar.style.display=style2;
-          btnFav.style.visibility=style3;
+          btnExpandir.style.visibility=style3;
 
         })
       }
-      expandirContraer(btnMovil,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
+     expandirContraer(btnMovil,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
       expandirContraer(btnExpandir,"gifExpandido","gifs","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
       expandirContraer(cerrar,"gifs","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
       
-    let contenido = input.value;
- 
+  
+      if(abierto == true){
       btnBuscadorDerecha.addEventListener("click",()=>{
-        if(abierto == true){
+     
       contenedor.removeChild(divMadre);
        btnVerMas.style.display="none";
        linea.style.display = "none";
        h2Resultado.style.display ="none";
-        }
+      
       })
+    }
      input.addEventListener("keyup",(event)=>{
       if(event.keycode == 8 || event.which === 8  ){
         if(abierto == true){

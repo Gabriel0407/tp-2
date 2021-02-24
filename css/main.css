@@ -244,10 +244,10 @@ header {
       .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido {
         color: #572ee5;
         position: absolute;
-        bottom: 16%;
+        bottom: 29%;
         font-size: 20px;
         width: 130px;
-        margin-left: 59%; }
+        margin-left: 54%; }
         .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido .fas {
           border: 1px solid #572EE5;
           border-radius: 10px;
@@ -256,9 +256,9 @@ header {
       .buscador .contenedor-gifs .tamano-gif-expandido .cerrar-btn {
         width: 100px;
         z-index: 12;
-        margin-left: 70%;
+        margin-left: 76%;
         font-size: 20px;
-        margin-top: 10%; }
+        margin-top: 80%; }
     .buscador .contenedor-gifs .tamano-gif {
       transition: 0.01s ease all;
       width: 140px;
@@ -271,6 +271,7 @@ header {
         z-index: 2;
         margin-top: 0; }
       .buscador .contenedor-gifs .tamano-gif .btn-movil {
+        transition: 0.3s ease all;
         position: absolute;
         width: 140px;
         height: 120px;
@@ -279,8 +280,10 @@ header {
       .buscador .contenedor-gifs .tamano-gif .cerrar-btn {
         display: none; }
       .buscador .contenedor-gifs .tamano-gif .div-img {
+        transition: 0.3s ease all;
         display: none; }
       .buscador .contenedor-gifs .tamano-gif .contenedor-botones {
+        transition: 0.3s ease all;
         display: none; }
   .buscador .titulo-resultado {
     color: #572EE5;
@@ -506,18 +509,16 @@ header {
         background: #FFFFFF;
         width: 100%;
         height: 100%;
+        position: fixed;
         top: 0%;
-        left: 0%;
-        margin: 0px 5px;
-        position: fixed; }
+        left: 0%; }
         body.dark .trending .carrusel-trending .carrusel .tamano-gif-expandido {
           background-color: #222326; }
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .gifExpandido {
           transition: 0.3s ease all;
           width: 250px;
-          position: absolute;
           height: 250px;
-          margin: auto;
+          position: absolute;
           left: 50%;
           margin-left: -125px;
           top: 50%;
@@ -525,37 +526,37 @@ header {
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido {
           color: #572ee5;
           position: absolute;
-          bottom: 16%;
+          bottom: 29%;
           font-size: 20px;
           width: 130px;
-          margin-left: 59%; }
+          margin-left: 54%; }
           .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido .fas {
             border: 1px solid #572EE5;
             border-radius: 10px;
             padding: 10px;
             margin-left: 10px; }
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .cerrar-btn {
+          color: #572ee5;
           width: 100px;
-          color: #572EE5;
           z-index: 12;
-          margin-left: 70%;
+          margin-left: 76%;
           font-size: 20px;
-          margin-top: 10%; }
+          margin-top: 80%; }
       .trending .carrusel-trending .carrusel .tamano-gif {
-        transition: 0.01s ease all;
-        width: 375px;
-        height: 275px;
-        margin: 0px 5px; }
+        transition: 0.3s ease all;
+        width: 243px;
+        height: 187px;
+        margin: 0 10px; }
         .trending .carrusel-trending .carrusel .tamano-gif .gifs {
-          transition: 0.01s ease all;
-          width: 240px;
-          height: 180px;
-          z-index: 2;
-          margin-top: 0; }
+          transition: 0.3s ease all;
+          width: 243px;
+          height: 187px;
+          position: relative;
+          margin-top: -172px; }
         .trending .carrusel-trending .carrusel .tamano-gif .btn-movil {
-          position: absolute;
-          width: 240px;
-          height: 180px;
+          position: relative;
+          width: 243px;
+          height: 187px;
           z-index: 5;
           margin-top: 0px; }
         .trending .carrusel-trending .carrusel .tamano-gif .cerrar-btn {
@@ -595,27 +596,6 @@ header {
         width: 92%;
         margin: auto;
         height: 300px; }
-        .trending .carrusel-trending .carrusel .tamano-gif-expandido {
-          cursor: pointer; }
-          .trending .carrusel-trending .carrusel .tamano-gif-expandido .gifExpandido {
-            width: 500px;
-            height: 500px;
-            margin-left: -250px;
-            margin-top: -250px; }
-          .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido {
-            bottom: 16%;
-            font-size: 20px;
-            width: 130px;
-            margin-left: 59%; }
-            .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido .fas {
-              border-radius: 10px;
-              padding: 10px;
-              margin-left: 10px; }
-          .trending .carrusel-trending .carrusel .tamano-gif-expandido .cerrar-btn {
-            width: 100px;
-            margin-left: 70%;
-            font-size: 20px;
-            margin-top: 10%; }
         .trending .carrusel-trending .carrusel .tamano-gif {
           width: 300px;
           height: 270px;
