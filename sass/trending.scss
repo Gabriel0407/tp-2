@@ -81,13 +81,20 @@
                   font-size: 20px;
                   width: 130px;
                   margin-left: 54%;
-                 .fas{
+                 .fas {
                   border: 1px solid $color-principal;
                   border-radius:10px ;
                   padding: 10px;
-                  margin-left: 10px;
-                 }
-                  
+                 margin-left: -16px ;
+                 
+                }
+                 .far{
+                  border: 1px solid $color-principal;
+                border-radius:10px ;
+                padding: 10px;
+               
+              
+                }
                 }
                 .cerrar-btn{
                   color: #572ee5;
@@ -95,7 +102,7 @@
                   z-index: 12;
                   margin-left: 76%;
                  font-size: 20px;
-                  margin-top: 80%;
+                  margin-top: 166px;
                  }
             }
               .tamano-gif{
@@ -118,6 +125,7 @@
                  margin-top: 0px;
               }
               .cerrar-btn{
+
                 display: none;
               }
               .div-img{
@@ -174,17 +182,32 @@
                 .tamano-gif-expandido{  
                    
                     .gifExpandido{
-                  
+                      width: 500px;
+                      height: 500px;
+                      margin-left: -250px;
+                      margin-top: -250px;
                      }
                      .contenedor-botones-expandido{
-                     
+                      bottom: 17%;
+                      font-size: 30px;
+                      width: 130px;
+                      margin-left: 58%;
                       .fas{
-                     
+                        &:hover{
+                          background-color: $color-principal;
+                          color: white;
+                        }
                       }
-                       
+                      .far{
+                        &:hover{
+                          background-color: $color-principal;
+                          color: white;
+                        }
+                      } 
                      }
                      .cerrar-btn{
-                    
+                      margin-top: 15%;
+                      margin-left: 76%;
                      }
                     }
                 

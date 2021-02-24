@@ -174,25 +174,29 @@
          }
          .contenedor-botones-expandido{
           color: #572ee5;
-         position: absolute;
-         bottom: 29%;
-         font-size: 20px;
-         width: 130px;
-         margin-left: 54%;
-         .fas{
-           border: 1px solid $color-principal;
-           border-radius:10px ;
-           padding: 10px;
-           margin-left: 10px;
+          position: absolute;
+          bottom: 29%;
+          font-size: 20px;
+          width: 130px;
+          margin-left: 54%;
+         .fas {
+          border: 1px solid $color-principal;
+                  border-radius:10px ;
+                  padding: 10px;
+                 margin-left: -16px ;
          }
-          
+          .far{
+            border: 1px solid $color-principal;
+                border-radius:10px ;
+                padding: 10px;
+          }
         }
         .cerrar-btn{
           width: 100px;
           z-index: 12;
           margin-left: 76%;
          font-size: 20px;
-          margin-top: 80%;
+          margin-top: 245px;
          }
     }
       .tamano-gif{
@@ -323,11 +327,7 @@
           font-size: 20px;
           width: 130px;
           margin-left: 59%;
-          .fas{
-            border-radius:10px ;
-            padding: 10px;
-            margin-left: 10px;
-          }
+          
            
          }
          .cerrar-btn{
@@ -353,6 +353,7 @@
      
         .cerrar-btn{
           display: none;
+          margin-top:166px;
         }
        
         .gifs{

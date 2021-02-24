@@ -90,7 +90,7 @@ anterior.addEventListener("click",()=>{
               divBtn.classList.remove(remove4);
               divMadre.style.zIndex=style1;
               cerrar.style.display=style2;
-              btnFav.style.visibility=style3;
+              btnExpandir.style.visibility=style3;
     
             })
           }
