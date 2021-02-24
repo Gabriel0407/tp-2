@@ -161,7 +161,10 @@ function buscarGif(link, limite) {
 
     });
 
-        
+
+    /*evento de  */
+
+
     })
 
     .catch(function (err) {

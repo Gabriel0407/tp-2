@@ -40,7 +40,8 @@ anterior.addEventListener("click",()=>{
     fetch(urlTrending)
     .then(res=> res.json())
     .then(function(json){
-
+           
+      
         json.data.forEach(function(obj){
             
             const gif = obj.images.fixed_width.url;
@@ -62,7 +63,7 @@ anterior.addEventListener("click",()=>{
             divImg.setAttribute("class", "div-img");
             divBtn.setAttribute("class", "contenedor-botones");
             divMadre.setAttribute("class", "tamano-gif");
-            btnFav.setAttribute("class", "far fa-heart btn-gif");
+            btnFav.setAttribute("class", "far fa-heart btn-gif","id","btn-favorito");
             btnDescargar.setAttribute("class","fas fa-arrow-down btn-gif");
             btnExpandir.setAttribute("class","fas fa-expand-alt btn-gif");
           
@@ -91,12 +92,12 @@ anterior.addEventListener("click",()=>{
               divMadre.style.zIndex=style1;
               cerrar.style.display=style2;
               btnExpandir.style.visibility=style3;
-    
             })
           }
           expandirContraer(btnMovil,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
           expandirContraer(btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
           expandirContraer(cerrar,"gifsTrending","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
+       
         })
     })
 

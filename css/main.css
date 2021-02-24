@@ -49,7 +49,7 @@ header {
   header .menu-burger {
     margin: auto;
     position: absolute;
-    margin-top: 884px;
+    margin-top: 877px;
     width: 100%;
     background-color: #572EE5;
     opacity: 80%;
@@ -244,7 +244,7 @@ header {
       .buscador .contenedor-gifs .tamano-gif-expandido .contenedor-botones-expandido {
         color: #572ee5;
         position: absolute;
-        bottom: 29%;
+        bottom: 27%;
         font-size: 20px;
         width: 130px;
         margin-left: 54%; }
