@@ -18,38 +18,42 @@
             .caja1{
                 border-top: 1px solid #50e3c2;
                 border-left: 1px solid #50e3c2;
-                top: 1.25rem;
-                left: 1.25rem;
+                top: 6px;
+                left: 6px;
                 width: 1.7rem;
                 height: 1.7rem;
-                position: absolute;
+                position: relative;
+                z-index: 3;
             }
             .caja2{
                 border-top: 1px solid #50e3c2;
                 border-right: 1px solid #50e3c2;
-                top: 1.25rem;
-                right: 1.25rem;
+                top: -21px;
+                right: -94%;
                 width: 1.7rem;
                 height: 1.7rem;
-                position: absolute;
+                position: relative;
+                z-index: 4;
             }
             .caja3{
                 border-bottom: 1px solid #50e3c2;
                 border-left: 1px solid #50e3c2;
-                bottom: 1.25rem;
-                left: 1.25rem;
+                bottom: -300px;
+                left: 6px;
                 width: 1.7rem;
                 height: 1.7rem;
-                position: absolute;
+                position: relative;
+                z-index: 5;
             }
             .caja4{
                 border-bottom: 1px solid #50e3c2;
                 border-right: 1px solid #50e3c2;
-                bottom: 1.25rem;
-                right: 1.25rem;
+                bottom: -274px;
+                right: -94%;
                 width: 1.7rem;
                 height: 1.7rem;
-                position: absolute;
+                position: relative;
+                z-index: 6;
             }
          
         

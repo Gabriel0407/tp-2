@@ -129,7 +129,11 @@
                 display: none;
               }
               .div-img{
+                display: none;
+              .nombre-gif{
+              
               display: none;
+              }
               }
               .contenedor-botones{
               display: none;
@@ -220,7 +224,7 @@
                   &:hover > .div-img{
                     display: block;
                   }
-                   &:hover > .contenedor-botones{
+                   &:hover > .div-img > .contenedor-botones{
                      display: block;
                    }
                  
@@ -229,7 +233,8 @@
                     }
                    
                     .gifs{
-                      
+                      position: relative;
+                      z-index: 2;
                       width: 300px;
                       height: 270px;
                       margin-top: 0px;
@@ -241,20 +246,21 @@
                       height: 270px;
                       z-index: 3;
                       opacity: 60%;
-                      position: absolute;
+                      position: relative;
                       background-color: $color-principal;
-                     
-                     
+                      .nombre-gif{
+                        
+                      }
                     }
                     .btn-movil{
                     display: none;
                     }
                     .contenedor-botones{
                       z-index: 4;
-                      position: absolute;
+                      position: relative;
                       margin-left: 174px;
                       width: 115px;
-                      margin-top: 10px;
+                      padding-top: 16px;
                       align-items: center;
                       display: none;
                       

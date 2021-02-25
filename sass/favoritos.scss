@@ -8,4 +8,49 @@
         font-size: 20px;
         margin: 10px auto 46px auto;
     }
+    .contenedor-favoritos{
+        width: 100%;
+        flex-wrap: wrap;
+        .gifs-favorito{
+
+            margin: 10px 5px;
+            width: 250px;
+            height: 250px;
+        }
+        .sin-contenido{
+            display: none;
+        text-align: center;
+        line-height: 33px;
+        margin-bottom: 200px;
+        .img-sin-contenido{
+            width: 150px;
+            height: 150px;
+        }
+        .p-sin-contenido{
+            width: 306px;
+            font-size: 15px;
+            color: #50E3C2;
+            margin: 20px auto;
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+}
+}
+@media (min-width:1024px){
+    .favoritos{
+    .h2-favoritos{
+        font-size: 20px;
+    }
+        .contenedor-favoritos{
+            .img-sin-contenido{
+                width: 200px;
+                height: 200px;
+            }
+            .p-sin-contenido{
+                width: 484px;
+                font-size: 25px;
+                
+            }
+        }
+    } 
 }

@@ -417,7 +417,37 @@ header {
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     margin: 10px auto 46px auto; }
+  .favoritos .contenedor-favoritos {
+    width: 100%;
+    flex-wrap: wrap; }
+    .favoritos .contenedor-favoritos .gifs-favorito {
+      margin: 10px 5px;
+      width: 250px;
+      height: 250px; }
+    .favoritos .contenedor-favoritos .sin-contenido {
+      display: none;
+      text-align: center;
+      line-height: 33px;
+      margin-bottom: 200px; }
+      .favoritos .contenedor-favoritos .sin-contenido .img-sin-contenido {
+        width: 150px;
+        height: 150px; }
+      .favoritos .contenedor-favoritos .sin-contenido .p-sin-contenido {
+        width: 306px;
+        font-size: 15px;
+        color: #50E3C2;
+        margin: 20px auto;
+        font-family: "Montserrat", sans-serif; }
 
+@media (min-width: 1024px) {
+  .favoritos .h2-favoritos {
+    font-size: 20px; }
+  .favoritos .contenedor-favoritos .img-sin-contenido {
+    width: 200px;
+    height: 200px; }
+  .favoritos .contenedor-favoritos .p-sin-contenido {
+    width: 484px;
+    font-size: 25px; } }
 .crear-gifs {
   display: none;
   margin-top: 125px; }
@@ -433,35 +463,39 @@ header {
     .crear-gifs .creargif .caja1 {
       border-top: 1px solid #50e3c2;
       border-left: 1px solid #50e3c2;
-      top: 1.25rem;
-      left: 1.25rem;
+      top: 6px;
+      left: 6px;
       width: 1.7rem;
       height: 1.7rem;
-      position: absolute; }
+      position: relative;
+      z-index: 3; }
     .crear-gifs .creargif .caja2 {
       border-top: 1px solid #50e3c2;
       border-right: 1px solid #50e3c2;
-      top: 1.25rem;
-      right: 1.25rem;
+      top: -21px;
+      right: -94%;
       width: 1.7rem;
       height: 1.7rem;
-      position: absolute; }
+      position: relative;
+      z-index: 4; }
     .crear-gifs .creargif .caja3 {
       border-bottom: 1px solid #50e3c2;
       border-left: 1px solid #50e3c2;
-      bottom: 1.25rem;
-      left: 1.25rem;
+      bottom: -300px;
+      left: 6px;
       width: 1.7rem;
       height: 1.7rem;
-      position: absolute; }
+      position: relative;
+      z-index: 5; }
     .crear-gifs .creargif .caja4 {
       border-bottom: 1px solid #50e3c2;
       border-right: 1px solid #50e3c2;
-      bottom: 1.25rem;
-      right: 1.25rem;
+      bottom: -274px;
+      right: -94%;
       width: 1.7rem;
       height: 1.7rem;
-      position: absolute; }
+      position: relative;
+      z-index: 6; }
 
 .trending {
   width: 100%;
@@ -568,6 +602,8 @@ header {
           display: none; }
         .trending .carrusel-trending .carrusel .tamano-gif .div-img {
           display: none; }
+          .trending .carrusel-trending .carrusel .tamano-gif .div-img .nombre-gif {
+            display: none; }
         .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones {
           display: none; }
 
@@ -628,11 +664,13 @@ header {
           cursor: pointer; }
           .trending .carrusel-trending .carrusel .tamano-gif:hover > .div-img {
             display: block; }
-          .trending .carrusel-trending .carrusel .tamano-gif:hover > .contenedor-botones {
+          .trending .carrusel-trending .carrusel .tamano-gif:hover > .div-img > .contenedor-botones {
             display: block; }
           .trending .carrusel-trending .carrusel .tamano-gif .cerrar-btn {
             display: none; }
           .trending .carrusel-trending .carrusel .tamano-gif .gifs {
+            position: relative;
+            z-index: 2;
             width: 300px;
             height: 270px;
             margin-top: 0px; }
@@ -643,16 +681,16 @@ header {
             height: 270px;
             z-index: 3;
             opacity: 60%;
-            position: absolute;
+            position: relative;
             background-color: #572EE5; }
           .trending .carrusel-trending .carrusel .tamano-gif .btn-movil {
             display: none; }
           .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones {
             z-index: 4;
-            position: absolute;
+            position: relative;
             margin-left: 174px;
             width: 115px;
-            margin-top: 10px;
+            padding-top: 16px;
             align-items: center;
             display: none; }
             .trending .carrusel-trending .carrusel .tamano-gif .contenedor-botones .btn-gif {

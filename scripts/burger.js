@@ -14,7 +14,7 @@ const sectionCrear = document.getElementById("crear-gifs");
 
 let cuerpo ="dia";
 let over = "no";
-
+let burgerAbierto =false ;
 
 /*modo noche*/
 modoND.addEventListener("click",()=>{
@@ -39,8 +39,20 @@ btnBurger.addEventListener("click", ()=>{
   burgerIcon.classList.toggle("fa-times");
   menuBurger.classList.toggle("cerrado");
   menuBurger.classList.toggle("abierto");
+  burgerAbierto = true
  });
+ /*cerrar menu cuando haces click en alguna seccion */
+ function cerrarAlClick(elemento){
+    elemento.addEventListener("click",()=>{
+      menuBurger.classList.toggle("cerrado");
+      menuBurger.classList.toggle("abierto");
+    })
+ }
 
+ cerrarAlClick(modoND);
+ cerrarAlClick(favoritos);
+ cerrarAlClick(misGifos);
+ 
  /*efectos del menu over y out */
 
  function agregar_evento(elemento,evento){
@@ -107,6 +119,11 @@ mousedown(modoND,"mousedown",favoritos,misGifos);
      crearGif.src ="./assets/button-crear-gifo.svg";
      favoritos.classList.remove("click");
      over="no";
+     if(burgerAbierto == true ){
+      menuBurger.classList.add("cerrado");
+      menuBurger.classList.remove("abierto");
+      burgerAbierto = false;
+   }
   });
 
 
