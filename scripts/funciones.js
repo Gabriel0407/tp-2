@@ -22,3 +22,22 @@ function crearGifs(elemento,atributo,padre){
     elemento.setAttribute("class",atributo);
     padre.appendChild(elemento);
 }
+/* */
+
+  
+    
+const descargarMiGifo = async (gif) => {
+	let blob = await fetch(
+		`https://media.giphy.com/media/${gif}/giphy.gif`
+	).then((img) => img.blob());
+	invokeSaveAsDialog(blob, 'My-Gif.gif');
+};
+    function descargar(btn,url){
+      btn.addEventListener("click",()=>{
+       descargarMiGifo(url)
+      })
+    }
+
+
+
+
