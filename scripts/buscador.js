@@ -109,8 +109,8 @@ function buscarGif(link, limite) {
          crearGifs(divMadre, "tamano-gif", contenedor);
     
       /*evento favorito con local storage */
-           asignarEvento(btnFav,gifNombre,gif);
-
+          asignarFav(btnFav,gif,gifNombre);
+         
      /*funcion para expandir y cerrar el gif */
 
      expandirContraer(btnMovil,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");

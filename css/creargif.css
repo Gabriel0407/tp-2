@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color-principal".
-        on line 15 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\creargif.scss
+        on line 16 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\creargif.scss
 
-10: 
-11:         }
-12:         .contenido{
-13:            width: 50%;
-14:             height: 390px;
-15:             border: 1px solid $color-principal;
-16:           
-17:         }
-18:             .caja1{
-19:                 border-top: 1px solid #50e3c2;
-20:                 border-left: 1px solid #50e3c2;
+11: 
+12:         }
+13:         .contenido{
+14:            width: 50%;
+15:             height: 390px;
+16:             border: 1px solid $color-principal;
+17:         
+18:         }
+19:             .caja1{
+20:                 border-top: 1px solid #50e3c2;
+21:                 border-left: 1px solid #50e3c2;
 
 Backtrace:
-C:\Users\sujeto\Desktop\tp-2\tp-2\sass\creargif.scss:15
+C:\Users\sujeto\Desktop\tp-2\tp-2\sass\creargif.scss:16
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -88,4 +88,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-principal\".\A         on line 15 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\creargif.scss\A \A 10: \A 11:         }\A 12:         .contenido{\A 13:            width: 50%;\A 14:             height: 390px;\A 15:             border: 1px solid $color-principal;\A 16:           \A 17:         }\A 18:             .caja1{\A 19:                 border-top: 1px solid #50e3c2;\A 20:                 border-left: 1px solid #50e3c2;"; }
+  content: "Error: Undefined variable: \"$color-principal\".\A         on line 16 of C:\Users\sujeto\Desktop\tp-2\tp-2\sass\creargif.scss\A \A 11: \A 12:         }\A 13:         .contenido{\A 14:            width: 50%;\A 15:             height: 390px;\A 16:             border: 1px solid $color-principal;\A 17:         \A 18:         }\A 19:             .caja1{\A 20:                 border-top: 1px solid #50e3c2;\A 21:                 border-left: 1px solid #50e3c2;"; }

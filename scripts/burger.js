@@ -44,6 +44,8 @@ btnBurger.addEventListener("click", ()=>{
  /*cerrar menu cuando haces click en alguna seccion */
  function cerrarAlClick(elemento){
     elemento.addEventListener("click",()=>{
+      burgerIcon.classList.toggle("fa-bars");
+      burgerIcon.classList.toggle("fa-times");
       menuBurger.classList.toggle("cerrado");
       menuBurger.classList.toggle("abierto");
     })
@@ -120,6 +122,8 @@ mousedown(modoND,"mousedown",favoritos,misGifos);
      favoritos.classList.remove("click");
      over="no";
      if(burgerAbierto == true ){
+      burgerIcon.classList.add("fa-bars");
+      burgerIcon.classList.remove("fa-times");
       menuBurger.classList.add("cerrado");
       menuBurger.classList.remove("abierto");
       burgerAbierto = false;
