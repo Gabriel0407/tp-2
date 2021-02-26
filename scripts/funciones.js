@@ -26,7 +26,6 @@ function crearGifs(elemento,atributo,padre){
 
   
    function download(file,link){
-     
-     link.setAttribute("download", file);
-     link.click()
-   } 
+     link.href=file;
+     link.setAttribute("download", "gif");
+   }

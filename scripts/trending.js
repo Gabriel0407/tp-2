@@ -53,7 +53,7 @@ anterior.addEventListener("click",()=>{
             let btnFav = document.createElement("div");
             let btnExpandir = document.createElement("div");
             let btnDescargar = document.createElement("a");   
-            btnDescargar.setAttribute("download","gif");
+            
             let divMadre = document.createElement("div");
             let divBtn = document.createElement("div");
             let divImg = document.createElement("div");
