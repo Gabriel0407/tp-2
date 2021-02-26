@@ -44,7 +44,7 @@ anterior.addEventListener("click",()=>{
       
         json.data.forEach(function(obj){
             
-            let descarga = obj.id
+            const descargaGif = obj.images.downsized.url;
             const gifNombre = obj.title;
             const gif = obj.images.fixed_width.url;
             let gifs = document.createElement("img");
@@ -52,7 +52,9 @@ anterior.addEventListener("click",()=>{
             gifs.setAttribute("class", "gifs", "id", "gifsOver");
             let btnFav = document.createElement("div");
             let btnExpandir = document.createElement("div");
-            let btnDescargar = document.createElement("div");
+            let btnDescargar = document.createElement("a");
+            btnDescargar.setAttribute("href",descargaGif);
+            btnDescargar.setAttribute("download","gif");
             let divMadre = document.createElement("div");
             let divBtn = document.createElement("div");
             let divImg = document.createElement("div");
@@ -65,8 +67,8 @@ anterior.addEventListener("click",()=>{
           /*atributos y appendchild  mediante una funcion*/
           crearGifs(btnFav,"far fa-heart btn-gif",divBtn);
           crearGifs(btnExpandir,"fas fa-expand-alt btn-gif",divBtn);
-          crearGifs(btnDescargar,"fas fa-arrow-down btn-gif",divBtn);
-          crearGifs(cerrar,"fas fa-times cerrar-btn",divMadre);
+        crearGifs(btnDescargar,"fas fa-arrow-down btn-gif",divBtn);
+        crearGifs(cerrar,"fas fa-times cerrar-btn",divMadre);
             
             crearGifs(divBtn,"contenedor-botones",divImg);
             crearGifs(nombreGif,"nombre-gif",divImg); 
@@ -80,8 +82,7 @@ anterior.addEventListener("click",()=>{
            
 
             
-            
-          descargar(btnDescargar ,descarga)
+         
              /*funcion para expandir y cerrar el gif */
 
           expandirContraer(btnMovil,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
