@@ -52,8 +52,7 @@ anterior.addEventListener("click",()=>{
             gifs.setAttribute("class", "gifs", "id", "gifsOver");
             let btnFav = document.createElement("div");
             let btnExpandir = document.createElement("div");
-            let btnDescargar = document.createElement("a");
-            btnDescargar.setAttribute("href",descargaGif);
+            let btnDescargar = document.createElement("a");   
             btnDescargar.setAttribute("download","gif");
             let divMadre = document.createElement("div");
             let divBtn = document.createElement("div");
@@ -63,7 +62,7 @@ anterior.addEventListener("click",()=>{
             nombreGif.textContent=gifNombre;
             let cerrar =document.createElement("div");
             
-
+            
           /*atributos y appendchild  mediante una funcion*/
           crearGifs(btnFav,"far fa-heart btn-gif",divBtn);
           crearGifs(btnExpandir,"fas fa-expand-alt btn-gif",divBtn);
@@ -82,7 +81,7 @@ anterior.addEventListener("click",()=>{
            
 
             
-         
+            download(descargaGif,btnDescargar)
              /*funcion para expandir y cerrar el gif */
 
           expandirContraer(btnMovil,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
