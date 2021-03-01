@@ -8,18 +8,20 @@
 
   
 body{
-  
- 
-   ul{ list-style: none;}
-   a{
-    text-decoration: none;
-   } 
-   span{
-       color: $color-secundario;
-   }
    
-   &.dark{
-       background:$color-dark-gray;
-   }
+    ul{ list-style: none;}
+    a{
+     text-decoration: none;
+    } 
+    span{
+        color: $color-secundario;
+    }
+    
+    &.dark{
+        background:$color-dark-gray;
+    }
 
 }
+
+
+

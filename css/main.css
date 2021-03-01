@@ -48,13 +48,13 @@ header {
     display: block; }
   header .menu-burger {
     margin: auto;
-    position: absolute;
-    margin-top: 877px;
+    position: fixed;
+    margin-top: 845px;
     width: 100%;
     background-color: #572EE5;
     opacity: 80%;
-    padding-bottom: 70vh;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    height: 90%; }
     header .menu-burger .li-menu {
       margin: 30px auto 15px auto;
       text-align: center;
@@ -129,48 +129,81 @@ header {
     font-family: "Montserrat", sans-serif; }
   .buscador .img-buscador {
     width: 300px; }
-  .buscador .container-buscador .form-buscador {
-    border: 1px #572EE5 solid;
-    width: 300px;
-    margin: auto;
-    border-radius: 15px;
-    margin-top: -4px;
+  .buscador .container-buscador {
     display: flex;
-    justify-content: space-between; }
-    body.dark .buscador .container-buscador .form-buscador {
-      border: 1px solid #FFFFFF; }
-    .buscador .container-buscador .form-buscador .btn-buscador {
-      border: none;
-      outline: none;
-      background: none;
-      color: #9CAFC3;
-      margin-left: 10px;
-      margin-top: 7px;
+    justify-content: center; }
+    .buscador .container-buscador .ul-sug {
+      transition: 0.1s ease;
+      position: absolute;
+      display: none;
+      margin-top: 20px;
+      background-color: white;
+      width: 300px;
+      border-radius: 0 0 25px 25px;
+      border-bottom: 1px solid #572EE5;
+      border-left: 1px solid #572EE5;
+      border-right: 1px solid #572EE5;
+      height: auto; }
+      .buscador .container-buscador .ul-sug .li-sugerencias {
+        transition: 0.1s ease;
+        display: flex;
+        justify-content: flex-start;
+        margin: 15px 10px;
+        cursor: pointer; }
+        .buscador .container-buscador .ul-sug .li-sugerencias .texto-sugerencia {
+          transition: 0.1s ease;
+          color: #9CAFC3;
+          font-size: 14px;
+          font-family: "Montserrat", sans-serif; }
+        .buscador .container-buscador .ul-sug .li-sugerencias .lupa {
+          transition: 0.1s ease;
+          margin-right: 10px;
+          color: #9CAFC3;
+          font-size: 14px; }
+    .buscador .container-buscador .form-buscador {
+      transition: 0.1s ease;
+      border: 1px #572EE5 solid;
+      width: 300px;
+      margin: auto;
+      border-radius: 15px;
+      margin-top: -4px;
+      display: flex;
+      justify-content: space-between; }
+      body.dark .buscador .container-buscador .form-buscador {
+        border: 1px solid #FFFFFF; }
+      .buscador .container-buscador .form-buscador .btn-buscador {
+        border: none;
+        outline: none;
+        background: none;
+        color: #9CAFC3;
+        margin-left: 10px;
+        margin-top: 7px;
+        display: none; }
+        body.dark .buscador .container-buscador .form-buscador .btn-buscador {
+          color: #FFFFFF; }
+      .buscador .container-buscador .form-buscador .input-buscador {
+        margin-top: 4px;
+        border: none;
+        font-size: 15px;
+        padding: 2px 0px;
+        outline: none;
+        margin-left: 17px;
+        width: 234px; }
+      .buscador .container-buscador .form-buscador .btn-buscar-derecha {
+        border: none;
+        margin-top: 7px;
+        outline: none;
+        background: none;
+        color: #572EE5;
+        margin-right: 10px; }
+        body.dark .buscador .container-buscador .form-buscador .btn-buscar-derecha {
+          color: #FFFFFF; }
+    .buscador .container-buscador .sugerencia {
+      width: 300px;
+      background-color: #572ee5;
+      height: 200px;
+      margin: auto;
       display: none; }
-      body.dark .buscador .container-buscador .form-buscador .btn-buscador {
-        color: #FFFFFF; }
-    .buscador .container-buscador .form-buscador .input-buscador {
-      margin-top: 4px;
-      border: none;
-      font-size: 15px;
-      padding: 2px 0px;
-      outline: none;
-      margin-left: 17px; }
-    .buscador .container-buscador .form-buscador .btn-buscar-derecha {
-      border: none;
-      margin-top: 7px;
-      outline: none;
-      background: none;
-      color: #572EE5;
-      margin-right: 10px; }
-      body.dark .buscador .container-buscador .form-buscador .btn-buscar-derecha {
-        color: #FFFFFF; }
-  .buscador .container-buscador .sugerencia {
-    width: 300px;
-    background-color: #572ee5;
-    height: 200px;
-    margin: auto;
-    display: none; }
   .buscador .linea {
     border-bottom: 1px solid #572EE5;
     width: 30%;
@@ -192,6 +225,7 @@ header {
     margin: auto;
     width: 250px; }
     .buscador .trending-topicos .p-topicos {
+      cursor: pointer;
       color: #572EE5;
       font-size: 14px;
       font-family: "Montserrat", sans-serif; }
@@ -209,6 +243,7 @@ header {
     margin: auto;
     color: #572EE5;
     font-size: 13px;
+    cursor: pointer;
     font-family: "Montserrat", sans-serif; }
   .buscador .efecto-vermas {
     background-color: #572EE5;
@@ -319,6 +354,16 @@ header {
     font-size: 35px; }
   .buscador .img-buscador {
     width: 25%; }
+  .buscador .container-buscador .ul-sug {
+    width: 38%;
+    margin-top: 38px; }
+    .buscador .container-buscador .ul-sug .li-sugerencias {
+      margin: 15px 12px; }
+      .buscador .container-buscador .ul-sug .li-sugerencias .texto-sugerencia {
+        font-size: 16px; }
+      .buscador .container-buscador .ul-sug .li-sugerencias .lupa {
+        margin-right: 10px;
+        font-size: 20px; }
   .buscador .container-buscador .form-buscador {
     width: 38%;
     border-radius: 25px; }

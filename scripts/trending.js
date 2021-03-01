@@ -53,7 +53,6 @@ anterior.addEventListener("click",()=>{
             let btnFav = document.createElement("div");
             let btnExpandir = document.createElement("div");
             let btnDescargar = document.createElement("a");   
-            
             let divMadre = document.createElement("div");
             let divBtn = document.createElement("div");
             let divImg = document.createElement("div");
@@ -64,32 +63,29 @@ anterior.addEventListener("click",()=>{
             
             
           /*atributos y appendchild  mediante una funcion*/
-          crearGifs(btnFav,"far fa-heart btn-gif",divBtn);
-          crearGifs(btnExpandir,"fas fa-expand-alt btn-gif",divBtn);
-        crearGifs(btnDescargar,"fas fa-arrow-down btn-gif",divBtn);
-        crearGifs(cerrar,"fas fa-times cerrar-btn",divMadre);
-            
-            crearGifs(divBtn,"contenedor-botones",divImg);
-            crearGifs(nombreGif,"nombre-gif",divImg); 
-            crearGifs(btnMovil,"btn-movil",divMadre);
-            divMadre.appendChild(gifs);
-            crearGifs(divImg,"div-img",divMadre);
-            crearGifs(divMadre,"tamano-gif",carrusel);
+          crearGifs(btnFav, "far fa-heart btn-gif", divBtn);
+          crearGifs(btnExpandir, "fas fa-expand-alt btn-gif", divBtn);
+          crearGifs(btnDescargar, "fas fa-arrow-down btn-gif", divBtn);
+          crearGifs(cerrar, "fas fa-times cerrar-btn", divMadre);
+          crearGifs(divBtn, "contenedor-botones", divImg);
+          crearGifs(nombreGif, "nombre-gif", divImg);
+          crearGifs(btnMovil, "btn-movil", divMadre);
+          divMadre.appendChild(gifs);
+          crearGifs(divImg,"div-img", divMadre);
+          crearGifs(divMadre,"tamano-gif", carrusel);
           
             /*evento favorito con local storage */
             asignarFav(btnFav,gif,gifNombre);
-           
-
+        
             
-            download(descargaGif,btnDescargar)
+  
              /*funcion para expandir y cerrar el gif */
 
           expandirContraer(btnMovil,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
           expandirContraer(btnExpandir,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
           expandirContraer(cerrar,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifsTrending","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
-       
+                  
         });
-
-
+          
     })
 

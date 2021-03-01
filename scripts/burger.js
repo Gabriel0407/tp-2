@@ -135,9 +135,9 @@ mousedown(modoND,"mousedown",favoritos,misGifos);
   /* accion para pasar de seccion a seccion */
   
 
-function click(elemento,funcion,obj1,obj2,obj3,obj4){
+function click(elemento,obj1,obj2,obj3,obj4){
 
-   elemento.addEventListener(funcion,()=>{
+   elemento.addEventListener("click",()=>{
       obj1.style.display ="block";
       obj2.style.display="none";
       obj3.style.display="none";
@@ -147,7 +147,7 @@ function click(elemento,funcion,obj1,obj2,obj3,obj4){
    })
 }
 
-click(logoHome,"click",sectionBuscador,sectionFav,sectionGifos,sectionCrear);
-click(favoritos,"click",sectionFav,sectionBuscador,sectionGifos,sectionCrear);
-click(misGifos,"click",sectionGifos,sectionBuscador,sectionFav,sectionCrear);
-click(crearGif,"click",sectionCrear,sectionBuscador,sectionFav,sectionGifos);
+click(logoHome,sectionBuscador,sectionFav,sectionGifos,sectionCrear);
+click(favoritos,sectionFav,sectionBuscador,sectionGifos,sectionCrear);
+click(misGifos,sectionGifos,sectionBuscador,sectionFav,sectionCrear);
+click(crearGif,sectionCrear,sectionBuscador,sectionFav,sectionGifos);

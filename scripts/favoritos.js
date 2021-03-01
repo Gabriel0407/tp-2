@@ -10,6 +10,7 @@ function asignarFav(elemento,storage,name){
   let like= name;
   let divMadre;
   let btnFav;
+
   elemento.addEventListener("click",()=>{
    
     if(like == name){
@@ -63,4 +64,3 @@ function asignarFav(elemento,storage,name){
 
   /*saber si hay gifs en favoritos */
  
-

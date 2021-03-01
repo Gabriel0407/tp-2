@@ -1,9 +1,9 @@
 /*funcion para expandir */
 
-function expandirContraer(elemento,gif,madre,img,btn,cerrar,expandir,add1,remove2,add2,remove2,add3,remove3,add4,remove4,style1,style2,style3){
+function expandirContraer(elemento,gif,madre,img,btn,cerrar,expandir,add1,remove1,add2,remove2,add3,remove3,add4,remove4,style1,style2,style3){
     elemento.addEventListener("click",()=>{
     gif.classList.add(add1);
-    gif.classList.remove(remove2);
+    gif.classList.remove(remove1);
     madre.classList.add(add2);
     madre.classList.remove(remove2);
     img.classList.add(add3);
@@ -17,6 +17,7 @@ function expandirContraer(elemento,gif,madre,img,btn,cerrar,expandir,add1,remove
   })
 }
  
+
 /*funcion para crear el gif llamado desde la api con todos sus objetos */
 function crearGifs(elemento,atributo,padre){
     elemento.setAttribute("class",atributo);
@@ -28,4 +29,5 @@ function crearGifs(elemento,atributo,padre){
    function download(file,link){
      link.href=file;
      link.setAttribute("download", "gif");
-   }
+    
+   } 

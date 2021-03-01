@@ -38,14 +38,14 @@ box-shadow: none;
   }
     .menu-burger{
        
-       margin: auto;
-        position: absolute;
-        margin-top: 877px;
+        margin: auto;
+        position: fixed;
+        margin-top: 845px;
         width: 100%;
-        background-color: $color-principal;
+        background-color:$color-principal;
         opacity: 80%;
-        padding-bottom: 70vh;
         color: $color-light;
+        height: 90%;
         
         .li-menu{
            margin:30px auto 15px auto;
@@ -85,7 +85,7 @@ box-shadow: none;
 }
 
 
-  @media (min-width:1024px){
+  @media(min-width:1024px){
 
     header{
      flex-direction: row;
