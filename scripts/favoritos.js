@@ -2,6 +2,7 @@ let btnFavorito = document.getElementById("btn-favorito");
 let contenedorVacio = document.getElementById("sinContenido");
 let contenedorDeFavoritos = document.getElementById("contenedorFavoritos");
 
+let vacio = true;
 
 
 
@@ -45,22 +46,45 @@ function asignarFav(elemento,storage,name){
         expandirContraer(btnExpandir,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
         expandirContraer(cerrar,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifsTrending","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
 
-       
+        descarga(btnDescargar,gifimg,nombreGif)
         like = false
- 
+        vacio = false;
+
+        
+          contenedorVacio.style.display= "none"
+        
+      
      }else if(like == false){
       localStorage.removeItem(name)
      like = name;
      contenedorDeFavoritos.removeChild(divMadre);
+    
    }
 
    btnFav.addEventListener("click",()=>{
     localStorage.removeItem(name)
     like = name;
     contenedorDeFavoritos.removeChild(divMadre);
-   })
-  });
+    if(localStorage.length == 0 ){
+  contenedorVacio.style.display= "block"
+
 }
 
+   })
+   if(localStorage.length == 0 ){
+    contenedorVacio.style.display= "block"
+  
+  }
+  });
+ 
+}
+
+if(localStorage.length == 0 ){
+  contenedorVacio.style.display= "block"
+
+}
+
+
   /*saber si hay gifs en favoritos */
+
  

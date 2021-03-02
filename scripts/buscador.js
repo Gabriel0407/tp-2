@@ -112,7 +112,8 @@ function buscarGif(link, limite) {
     
       /*evento favorito con local storage */
           asignarFav(btnFav,gif,gifNombre);
-         
+          /*descarga*/
+          descarga(btnDescargar,gifs,nombreGif)
         
      /*funcion para expandir y cerrar el gif */
 

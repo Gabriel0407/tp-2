@@ -24,10 +24,19 @@ function crearGifs(elemento,atributo,padre){
     padre.appendChild(elemento);
 }
 /* */
-
+function descarga(btn,img,title){
   
-   function download(file,link){
-     link.href=file;
-     link.setAttribute("download", "gif");
-    
-   } 
+   btn.addEventListener("click",async function(){
+     let a = document.createElement("a");
+     let response = await fetch(img.src);
+     let gif = await response.blob();
+     a.download = title.textContent;
+     a.href = window.URL.createObjectURL(gif);
+     a.dataset.downloadurl =[
+       "application/octet-stream",
+       a.download,
+       a.href
+     ].join(":");
+     a.click();
+   })
+  }

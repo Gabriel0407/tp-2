@@ -1,3 +1,7 @@
+
+ 
+ 
+
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
 const carrusel = document.getElementById("carrusel");
@@ -44,7 +48,7 @@ anterior.addEventListener("click",()=>{
       
         json.data.forEach(function(obj){
             
-            const descargaGif = obj.images.downsized.url;
+            
             const gifNombre = obj.title;
             const gif = obj.images.fixed_width.url;
             let gifs = document.createElement("img");
@@ -52,7 +56,7 @@ anterior.addEventListener("click",()=>{
             gifs.setAttribute("class", "gifs", "id", "gifsOver");
             let btnFav = document.createElement("div");
             let btnExpandir = document.createElement("div");
-            let btnDescargar = document.createElement("a");   
+            let btnDescargar = document.createElement("div");   
             let divMadre = document.createElement("div");
             let divBtn = document.createElement("div");
             let divImg = document.createElement("div");
@@ -76,7 +80,8 @@ anterior.addEventListener("click",()=>{
           
             /*evento favorito con local storage */
             asignarFav(btnFav,gif,gifNombre);
-        
+             /*descarga*/
+            descarga(btnDescargar,gifs,nombreGif)
             
   
              /*funcion para expandir y cerrar el gif */
