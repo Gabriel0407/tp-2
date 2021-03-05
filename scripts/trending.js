@@ -1,6 +1,5 @@
 
  
- 
 
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
@@ -79,11 +78,12 @@ anterior.addEventListener("click",()=>{
           crearGifs(divMadre,"tamano-gif", carrusel);
           
             /*evento favorito con local storage */
-            asignarFav(btnFav,gif,gifNombre);
+            asignarFav(btnFav,gif,gifNombre)
              /*descarga*/
+            //  asignarFavs()
             descarga(btnDescargar,gifs,nombreGif)
-            
-  
+           
+           
              /*funcion para expandir y cerrar el gif */
 
           expandirContraer(btnMovil,gifs,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");

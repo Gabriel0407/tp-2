@@ -5,11 +5,15 @@
 
     .creargif{
      display: flex;
-     justify-content: space-evenly;
+     
+     justify-content: center;
         .camara{
             display: flex;
-
-        }
+            position: absolute;
+            z-index: 2;   
+             left: 5%;
+            top: 195px;   
+             }
         .contenido{
            width: 50%;
             height: 390px;
@@ -69,11 +73,34 @@
              .h2-crear-gif{
                  width: 100%;
                  text-align: center;
-
+                 font-size: 25px;
+                 font-family: "Montserrat", sans-serif;
+                 color: $color-principal;
+                 margin-bottom: 15px;
              }
              .text{
+                font-size: 16px;
                 width: 100%;
                 text-align: center;   
+                font-family: 'Roboto', sans-serif;
+             }
+             .h2-permiso{
+                display: none;
+                width: 100%;
+                text-align: center;
+                font-size: 25px;
+                font-family: "Montserrat", sans-serif;
+                color: $color-principal;
+                margin-bottom: 15px;
+                width: 236px;
+             }
+             .p-permiso{
+                display: none;
+                font-size: 16px;
+                width: 100%;
+                text-align: center;   
+                font-family: 'Roboto', sans-serif;
+                width: 292px;
              }
              .info{
                 text-align: center;
@@ -82,6 +109,8 @@
             }
             .grabacion-video{
                 display: none;
+                max-width:  96%;
+                height: 380px;
             }
          }
         
@@ -93,7 +122,95 @@
             .btn-subir{
                 display: flex;
                 justify-content: center;
-                margin-left: 10%;
+               margin-top: 12px;
+                margin-bottom: 12px;
+               .partes{
+                   transition: 0.2s ease all;
+                    font-family: 'Roboto', sans-serif;
+                    margin: 10px 5px;
+                    border-radius: 50%;
+                    font-size: 16px;
+                    color: #572EE5;
+                    padding: 8px 15px;
+                    border: 1px solid #572EE5;
+                    
+               }
+            }
+            .contador{
+                display: flex;
+                justify-content: center;
+                margin-left: 50%;
+               margin-top: -50px;
+                margin-bottom:38px;
+                .p-contador{
+                    margin-right: 52px;
+                    display: none;
+                    font-size: 15px;
+                    color: $color-principal;
+                    font-family: "Montserrat", sans-serif;
+                }
+                .repetir-captura{
+                    display: none;
+                    margin-right: 168px;
+                    transition: 0.2s ease;
+                    border: none;
+                    background: none;
+                    font-size: 13px;
+                    color: $color-principal;
+                    font-family: "Montserrat", sans-serif;
+                    &:hover{
+                        border-bottom: 2px solid $color-secundario;
+                    }
+                }
+            }
+            .linea{
+                width: 796px;
+                height: 7px;
+                background-color: $color-principal;
+                border-radius: 5px;
+                margin: auto;
+            }
+            .div-subir{
+                display: flex;
+                justify-content: center;
+                margin-top: 26px;
+                margin-bottom: 50px;
+               
+                .btn{
+                    font-size: 13px;
+                    color: $color-principal;
+                    font-family: "Montserrat", sans-serif;
+                    border: 1px solid;
+                    border-radius: 20px;
+                    padding: 14px;
+                    &:hover{
+                        background-color: $color-principal;
+                        color: white;
+                    }
+                }
+                #btn-comenzar{
+                    
+                }
+                #btn-grabar{
+                    display: none;
+                }
+                #btn-finalizar{
+                    display: none;
+                }
+                #btn-subir-gifos{
+                    display: none;
+                }
+            }
+
+            .rollo-filmar{
+            
+                right: 0px;
+                margin-right: 8%;
+                margin-top: -226px;
+                position: absolute;
+                img{
+               
+                }
             }
         }
     }

@@ -11,7 +11,9 @@ const sectionBuscador = document.getElementById("buscador");
 const sectionFav = document.getElementById("favoritos");
 const sectionGifos = document.getElementById("mis-gifos-sec");
 const sectionCrear = document.getElementById("crear-gifs");
-
+const sectionTrending =document.getElementById("trending");
+const camara = document.getElementById("camara");
+const rollo = document.getElementById("rollo-de-pelicula");
 let cuerpo ="dia";
 let over = "no";
 let burgerAbierto =false ;
@@ -23,12 +25,16 @@ modoND.addEventListener("click",()=>{
       modoND.textContent ="MODO DIURNO";
       logoHome.src ="assets/Logo-modo-noc.svg";
       crearGif.src = "assets/CTA-crear-gifo-modo-noc.svg";
+      camara.src ="assets/camara-modo-noc.svg" ;
+      rollo.src="assets/pelicula-modo-noc.svg";
       modoND.classList.remove("click");
       cuerpo ="noche";
    }else if(cuerpo =="noche"){
       modoND.textContent ="MODO NOCTURNO";
       logoHome.src ="assets/logo-desktop.svg";
       crearGif.src = "assets/button-crear-gifo.svg";
+      camara.src ="assets/camara.svg" ;
+      rollo.src="assets/pelicula.svg";
       modoND.classList.remove("click");
      cuerpo= "dia";
    }
@@ -142,7 +148,11 @@ function click(elemento,obj1,obj2,obj3,obj4){
       obj2.style.display="none";
       obj3.style.display="none";
       obj4.style.display="none";
-   
+     if(elemento == crearGif){
+        sectionTrending.style.display="none";
+     }else{
+      sectionTrending.style.display="block";
+     }
      
    })
 }

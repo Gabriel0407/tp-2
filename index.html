@@ -119,12 +119,15 @@
                     Aquí podrás <br/>
                     crear tus propios <span>GIFOS</span>
                 </h2>
-                <p class="text" id="p-">
+                <h2 class="h2-permiso" id="h2-permiso">¿Nos das acceso 
+                    a tu cámara?</h2>
+                <p class="text" id="p-text">
                     ¡Crea tu GIFO en solo 3 pasos! <br />
                     (solo necesitas una cámara para grabar un video)
                   </p>
-
-                  <div class="grabar" id=" grabar">
+                  <p class="p-permiso" id="p-permiso">El acceso a tu camara será válido sólo
+                    por el tiempo en el que estés creando el GIFO.</p>
+                  <div class="grabar" id="grabar">
                       <div class="btns-gif" id="btns-gif">
 
                       </div>
@@ -136,7 +139,7 @@
                       </div>
               
                 </div>
-                  <video src="" class="grabacion-video" id="grabacion-video"></video>
+                  <video class="grabacion-video" id="grabacion-video" autoplay></video>
                   <img src="" alt="" id="gifo-grabado">
                 </div>
       
@@ -147,21 +150,22 @@
         <div class="vacio"></div>
         <div class="controles">
             <div class="btn-subir">
-                <p class="partes" id="partes">1</p>
-                <p class="partes" id="partes">2</p>
-                <p class="partes" id="partes">3</p>
+                <p class="partes" id="parte1"><b>1</b> </p>
+                <p class="partes" id="parte2"><b> 2  </b></p>
+                <p class="partes" id="parte3"><b>3</b></p>
             </div>
             <div class="contador">
                 <p class="p-contador" id="p-contador">0:00:00</p>
                 <button class="repetir-captura" id="repetir-captura">
-                    Repetir captura
+                   REPETIR CAPTURA
                 </button>
             </div>
-            <div class="div-subir"></div>
-            <a href="#" id="btn-comenzar" class="btn">Comenzar</a>
-            <a href="#" id="btn-grabar" class="btn">Grabar</a>
-            <a href="#" id="btn-finalizar" class="btn">Finalizar</a>
-            <a href="#" id="btn-dubir-gifos" class="btn">Subir Gifo</a>
+            <div class="linea"></div>
+            <div class="div-subir">
+            <a href="#" id="btn-comenzar" class="btn">COMENZAR</a>
+            <a href="#" id="btn-grabar" class="btn">GRABAR</a>
+            <a href="#" id="btn-finalizar" class="btn">FINALIZAR</a>
+            <a href="#" id="btn-subir-gifos" class="btn">SUBIR GIFO</a>
         </div>
         <div class="rollo-filmar">
         <img src="./assets/pelicula.svg" alt="rollo-de-pelicula" id="rollo-de-pelicula">      
@@ -170,7 +174,7 @@
 </section> 
 
         <!-- seccion trending-->
-        <section class="trending" > 
+        <section class="trending" id="trending" > 
             <h2 class="h2-trending">Trending GIFOS</h2>
             <p class="p-trending">
                 Mira los últimos GIFOS de nuestra comunidad.  
@@ -210,5 +214,6 @@
     <script src="./scripts/buscador.js"></script>
     <script src="./scripts/trending.js"></script>
     <script src="./scripts/favoritos.js"></script>
+    <script src="./scripts/webcam.js"></script>
 </body>
 </html>

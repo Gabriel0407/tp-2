@@ -1,3 +1,4 @@
+
 const verMas = document.getElementById("btn-ver-mas");
 const btnBuscador = document.getElementById("btn-buscar");
 const btnIcon = document.getElementById("btn-icon");
@@ -53,7 +54,11 @@ togleBuscador(btnBuscadorDerecha, "fa-times", "fa-search", "none");
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
   let valor = input.value;
-
+    sugerenciasContenedor.style.display="none";
+    searchForm.style.paddingBottom = "0px";
+    searchForm.style.borderRadius= "25px"
+    searchForm.style.borderBottom = "1px solid";
+    input.value = "";
   let offset = 0;
   buscarGif(valor, offset);
 });
@@ -253,7 +258,7 @@ const sugerencias = ()=>{
 /*funcion para mostrar y cerrar la sugerencias */
 function cerrarSugerencia(btn, funcion) {
   btn.addEventListener(funcion, () => {
-    if (btn == input) {
+    if (btn == input ) {
       if (event.keycode == 8 || event.which === 8) {
         sugerenciasContenedor.style.display="none";
         searchForm.style.paddingBottom = "0px";
@@ -286,3 +291,4 @@ input.addEventListener("keyup",()=>{
 
 cerrarSugerencia(btnBuscadorDerecha, "click");
 cerrarSugerencia(input, "keydown");
+

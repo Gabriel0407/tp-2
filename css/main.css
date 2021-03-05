@@ -635,9 +635,13 @@ header {
   margin-top: 125px; }
   .crear-gifs .creargif {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: center; }
     .crear-gifs .creargif .camara {
-      display: flex; }
+      display: flex;
+      position: absolute;
+      z-index: 2;
+      left: 5%;
+      top: 195px; }
     .crear-gifs .creargif .contenido {
       width: 50%;
       height: 390px;
@@ -690,19 +694,108 @@ header {
       margin-top: -110px; }
       .crear-gifs .creargif .subir-gifo .h2-crear-gif {
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        font-size: 25px;
+        font-family: "Montserrat", sans-serif;
+        color: #572EE5;
+        margin-bottom: 15px; }
       .crear-gifs .creargif .subir-gifo .text {
+        font-size: 16px;
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        font-family: 'Roboto', sans-serif; }
+      .crear-gifs .creargif .subir-gifo .h2-permiso {
+        display: none;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        font-family: "Montserrat", sans-serif;
+        color: #572EE5;
+        margin-bottom: 15px;
+        width: 236px; }
+      .crear-gifs .creargif .subir-gifo .p-permiso {
+        display: none;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        width: 292px; }
       .crear-gifs .creargif .subir-gifo .info {
         text-align: center;
         display: none; }
       .crear-gifs .creargif .subir-gifo .grabacion-video {
-        display: none; }
+        display: none;
+        max-width: 96%;
+        height: 380px; }
   .crear-gifs .crear-controles .controles .btn-subir {
     display: flex;
     justify-content: center;
-    margin-left: 10%; }
+    margin-top: 12px;
+    margin-bottom: 12px; }
+    .crear-gifs .crear-controles .controles .btn-subir .partes {
+      transition: 0.2s ease all;
+      font-family: 'Roboto', sans-serif;
+      margin: 10px 5px;
+      border-radius: 50%;
+      font-size: 16px;
+      color: #572EE5;
+      padding: 8px 15px;
+      border: 1px solid #572EE5; }
+  .crear-gifs .crear-controles .controles .contador {
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    margin-top: -50px;
+    margin-bottom: 38px; }
+    .crear-gifs .crear-controles .controles .contador .p-contador {
+      margin-right: 52px;
+      display: none;
+      font-size: 15px;
+      color: #572EE5;
+      font-family: "Montserrat", sans-serif; }
+    .crear-gifs .crear-controles .controles .contador .repetir-captura {
+      display: none;
+      margin-right: 168px;
+      transition: 0.2s ease;
+      border: none;
+      background: none;
+      font-size: 13px;
+      color: #572EE5;
+      font-family: "Montserrat", sans-serif; }
+      .crear-gifs .crear-controles .controles .contador .repetir-captura:hover {
+        border-bottom: 2px solid #5ED7C6; }
+  .crear-gifs .crear-controles .controles .linea {
+    width: 796px;
+    height: 7px;
+    background-color: #572EE5;
+    border-radius: 5px;
+    margin: auto; }
+  .crear-gifs .crear-controles .controles .div-subir {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+    margin-bottom: 50px; }
+    .crear-gifs .crear-controles .controles .div-subir .btn {
+      font-size: 13px;
+      color: #572EE5;
+      font-family: "Montserrat", sans-serif;
+      border: 1px solid;
+      border-radius: 20px;
+      padding: 14px; }
+      .crear-gifs .crear-controles .controles .div-subir .btn:hover {
+        background-color: #572EE5;
+        color: white; }
+    .crear-gifs .crear-controles .controles .div-subir #btn-grabar {
+      display: none; }
+    .crear-gifs .crear-controles .controles .div-subir #btn-finalizar {
+      display: none; }
+    .crear-gifs .crear-controles .controles .div-subir #btn-subir-gifos {
+      display: none; }
+  .crear-gifs .crear-controles .controles .rollo-filmar {
+    right: 0px;
+    margin-right: 8%;
+    margin-top: -226px;
+    position: absolute; }
 
 .trending {
   width: 100%;
@@ -926,6 +1019,23 @@ footer .p-copyright {
   margin: 48px auto 22px auto;
   width: 222px; }
 
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    footer .social {
+      display: flex;
+      align-items: center; }
+      footer .social .iconos-social {
+        margin-top: 22px; }
+        footer .social .iconos-social a {
+          transition: 0.1s ease-in all; }
+          footer .social .iconos-social a:hover {
+            color: #572EE5; }
+    footer .p-copyright {
+      margin: 0;
+      width: auto; } }
 .mis-gifos {
   margin-top: 125px;
   text-align: center;
