@@ -80,7 +80,7 @@ anterior.addEventListener("click",()=>{
             /*evento favorito con local storage */
             asignarFav(btnFav,gif,gifNombre)
              /*descarga*/
-            //  asignarFavs()
+             asignarFavs()
             descarga(btnDescargar,gifs,nombreGif)
            
            

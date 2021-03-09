@@ -692,6 +692,48 @@ header {
       width: 100%;
       height: 100%;
       margin-top: -110px; }
+      .crear-gifs .creargif .subir-gifo .grabar {
+        width: 570px;
+        background: #572EE5;
+        opacity: 60%;
+        position: absolute;
+        z-index: 8;
+        height: 380px;
+        display: none; }
+        .crear-gifs .creargif .subir-gifo .grabar .btns-gif {
+          display: none;
+          width: 110px;
+          justify-content: center;
+          float: right;
+          margin-top: 16px;
+          margin-right: 20px; }
+          .crear-gifs .creargif .subir-gifo .grabar .btns-gif .btn-crear {
+            color: #572EE5;
+            font-size: 18px;
+            width: 32px;
+            height: 32px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            opacity: 80%;
+            margin: 0 10px; }
+            .crear-gifs .creargif .subir-gifo .grabar .btns-gif .btn-crear:hover {
+              opacity: 100%; }
+      .crear-gifs .creargif .subir-gifo .info {
+        text-align: center;
+        flex-direction: column;
+        display: none;
+        align-items: center;
+        margin-top: 148px; }
+        .crear-gifs .creargif .subir-gifo .info .icono-cargando {
+          width: 30px; }
+        .crear-gifs .creargif .subir-gifo .info .p-subir-gifo {
+          margin-top: 20px;
+          font-size: 15px;
+          font-family: "Montserrat", sans-serif;
+          color: white; }
       .crear-gifs .creargif .subir-gifo .h2-crear-gif {
         width: 100%;
         text-align: center;
@@ -720,12 +762,9 @@ header {
         text-align: center;
         font-family: 'Roboto', sans-serif;
         width: 292px; }
-      .crear-gifs .creargif .subir-gifo .info {
-        text-align: center;
-        display: none; }
       .crear-gifs .creargif .subir-gifo .grabacion-video {
         display: none;
-        max-width: 96%;
+        width: 570px;
         height: 380px; }
   .crear-gifs .crear-controles .controles .btn-subir {
     display: flex;

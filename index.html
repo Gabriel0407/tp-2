@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3bc7d78e54.js" ></script>
     <link rel="icon" href="assets/logo-desktop.svg" />
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
@@ -129,7 +130,8 @@
                     por el tiempo en el que estés creando el GIFO.</p>
                   <div class="grabar" id="grabar">
                       <div class="btns-gif" id="btns-gif">
-
+                            <div class="btn-crear"><i class="fas fa-arrow-down"></i></div>
+                            <div class="btn-crear"><i class="fas fa-share"></i></div>
                       </div>
                       <div class="info" id="info">
                           <img src="./assets/loader.svg" alt="cargando gifo" class="icono-cargando" id="icono-cargando">
@@ -139,8 +141,9 @@
                       </div>
               
                 </div>
+                
                   <video class="grabacion-video" id="grabacion-video" autoplay></video>
-                  <img src="" alt="" id="gifo-grabado">
+                  <img src="" alt="" id="gifo-grabado" class="grabacion-video">
                 </div>
       
     </div>
@@ -155,10 +158,10 @@
                 <p class="partes" id="parte3"><b>3</b></p>
             </div>
             <div class="contador">
-                <p class="p-contador" id="p-contador">0:00:00</p>
-                <button class="repetir-captura" id="repetir-captura">
+                <p class="p-contador" id="p-contador"></p>
+                <div class="repetir-captura" id="repetir-captura">
                    REPETIR CAPTURA
-                </button>
+                </div>
             </div>
             <div class="linea"></div>
             <div class="div-subir">
