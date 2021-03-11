@@ -160,7 +160,7 @@ await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghw
         body:form,
 })
 .then((res)=> res.json())
-.then((gifoSubido)=>{
+.then(gifoSubido=>{
      let miGifo = gifoSubido.id;
 
      arrMisGifos.push(miGifo);
