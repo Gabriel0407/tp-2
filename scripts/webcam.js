@@ -155,7 +155,7 @@ btnSubir.addEventListener("click",()=>{
 async function subirGif(){
 
 
-await fetch(`https://upload.giphy.com/v1/gifs`,{
+await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghwaQot2D&file=${gifGrabado}`,{
         method:'POST',
         body:form,
 })
