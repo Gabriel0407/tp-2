@@ -74,6 +74,17 @@
                   top: 50%;
                   margin-top: -125px;
                 }
+                .div-img-expan{
+                  .nombre-gif{
+                    width: auto;
+                    font-size: 13px;
+                    position: absolute;
+                    top: 32%;
+                    left: 50%;
+                    margin-left: -123px;
+                
+                  }
+                }
                  .contenedor-botones-expandido{
                   color: #572ee5;
                   position: absolute;
@@ -88,6 +99,7 @@
                  margin-left: -16px ;
                  
                 }
+              
                  .far{
                   border: 1px solid $color-principal;
                 border-radius:10px ;
@@ -132,7 +144,7 @@
                 display: none;
               .nombre-gif{
               
-              display: none;
+                display: none;
               }
               }
               .contenedor-botones{
@@ -209,6 +221,20 @@
                         }
                       } 
                      }
+                  
+                
+                     .div-img-expan{
+                      .nombre-gif{
+            
+                        font-size: 20px;
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+                        margin-left: -249px;
+                        color: #572EE5;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                  }
                      .cerrar-btn{
                       margin-top: 15%;
                       margin-left: 76%;

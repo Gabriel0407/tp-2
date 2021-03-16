@@ -38,12 +38,12 @@ btnComenzar.addEventListener("click",()=>{
         btnComenzar.style.display="none";
         h2Permiso.style.display="block";
         permiso.style.display="block";
-        habilitado = true;
+        
         paso1.style.background="#572EE5";
         paso1.style.color="#ffffff";
 navigator.mediaDevices.getUserMedia({audio:false, video:true})
 .then((stream)=>{
-    if(habilitado == true){
+
     console.log(stream);
     pantallaVideo.srcObject = stream;
     pantallaVideo.style.display="block";
@@ -64,7 +64,7 @@ navigator.mediaDevices.getUserMedia({audio:false, video:true})
                  console.log('started');
                },
               });     
-}
+
 }).catch((err)=>console.log(err))
 })
  
@@ -106,7 +106,7 @@ btnRepetir.addEventListener("click",()=>{
         gifGrabado.style.display="none"
         navigator.mediaDevices.getUserMedia({audio:false, video:true})
 .then((stream)=>{
-    if(habilitado == true){
+    
     console.log(stream);
     pantallaVideo.srcObject = stream;
     pantallaVideo.style.display="block";
@@ -127,7 +127,7 @@ btnRepetir.addEventListener("click",()=>{
                  console.log('started');
                },
               });     
-}
+
 }).catch((err)=>console.log(err))
 
         btnSubir.style.display="none";
@@ -159,19 +159,19 @@ await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghw
         method:'POST',
         body:form,
 })
-.then((res)=> res.json())
-.then(gifoSubido=>{
-     let miGifo = gifoSubido.id;
+// .then((res)=> res.json())
+// .then(gifoSubido=>{
+//      let miGifo = gifoSubido.id;
 
-     arrMisGifos.push(miGifo);
-console.log(arrMisGifos);
+//      arrMisGifos.push(miGifo);
+// console.log(arrMisGifos);
 
- let misGifos = localStorage.setItem("misGifos",JSON.stringify(arrMisGifos));
+//   localStorage.setItem("misGifos",JSON.stringify(arrMisGifos));
  
-})
-.catch((err)=>{
-        console.log(err);
-})
+// })
+// .catch((err)=>{
+//         console.log(err);
+// })
 
 
 }

@@ -897,6 +897,13 @@ header {
           margin-left: -125px;
           top: 50%;
           margin-top: -125px; }
+        .trending .carrusel-trending .carrusel .tamano-gif-expandido .div-img-expan .nombre-gif {
+          width: auto;
+          font-size: 13px;
+          position: absolute;
+          top: 32%;
+          left: 50%;
+          margin-left: -123px; }
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido {
           color: #572ee5;
           position: absolute;
@@ -992,6 +999,14 @@ header {
           .trending .carrusel-trending .carrusel .tamano-gif-expandido .contenedor-botones-expandido .far:hover {
             background-color: #572EE5;
             color: white; }
+        .trending .carrusel-trending .carrusel .tamano-gif-expandido .div-img-expan .nombre-gif {
+          font-size: 20px;
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          margin-left: -249px;
+          color: #572EE5;
+          font-family: 'Montserrat', sans-serif; }
         .trending .carrusel-trending .carrusel .tamano-gif-expandido .cerrar-btn {
           margin-top: 15%;
           margin-left: 76%; }

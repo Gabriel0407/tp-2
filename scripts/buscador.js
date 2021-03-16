@@ -54,13 +54,14 @@ togleBuscador(btnBuscadorDerecha, "fa-times", "fa-search", "none");
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
   let valor = input.value;
-    sugerenciasContenedor.style.display="none";
-    searchForm.style.paddingBottom = "0px";
-    searchForm.style.borderRadius= "25px"
-    searchForm.style.borderBottom = "1px solid";
-    input.value = "";
+    // sugerenciasContenedor.style.display="none";
+    // searchForm.style.paddingBottom = "0px";
+    // searchForm.style.borderRadius= "25px"
+    // searchForm.style.borderBottom = "1px solid";
+    // input.value = "";
   let offset = 0;
   buscarGif(valor, offset);
+
 });
 
 /* btn ver mas*/
@@ -71,6 +72,8 @@ verMas.addEventListener("click", (e) => {
 
   buscarGif(valor, offset);
 });
+
+
 
 /*llamar a la api y crear mediante dom el gif y sus atributos */
 function buscarGif(link, limite) {
