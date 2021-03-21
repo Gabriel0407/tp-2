@@ -104,6 +104,7 @@
                     }
                  }
              }
+            
              .info{
               
                 text-align: center;
@@ -114,7 +115,10 @@
                 margin-top: 148px;
                  .icono-cargando{
                     width: 30px;
+                   position: fixed;
+                   animation: giragira 5s linar infinite;
                  }
+                
                  .p-subir-gifo{
                      margin-top: 20px;
                     font-size: 15px;
@@ -123,6 +127,7 @@
                  
                  }
              }
+           
              .h2-crear-gif{
                  width: 100%;
                  text-align: center;
@@ -264,3 +269,4 @@
         }
     }
 }
+

@@ -87,10 +87,7 @@ let i = 0;
  
 // }
 
-if(localStorage.length == 0 ){
-  contenedorVacio.style.display= "block"
 
-}
 
 
 
@@ -98,6 +95,10 @@ if(localStorage.length == 0 ){
 
   /*saber si hay gifs en favoritos */
   let arrFav =[];
+  // if(arrFav.length === 0 ){
+  //   contenedorVacio.style.display= "block"
+  
+  // }
   function asignarFav(elemento,storage,name){
     
     elemento.addEventListener("click",()=>{
@@ -114,6 +115,7 @@ let objGif ={
   })
 
  }
+ 
  function asignarFavs(){
   
   contenedorDeFavoritos.innerHTML = '';
@@ -133,6 +135,7 @@ let objGif ={
         let divBtn = document.createElement("div");
         let divImg = document.createElement("div");
         let nombreGif = document.createElement("p");
+        nombreGif.textContent= `${arrFav[i].title}`
         let btnMovil = document.createElement("div");
         let cerrar =document.createElement("div")
         

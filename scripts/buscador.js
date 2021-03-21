@@ -54,10 +54,10 @@ togleBuscador(btnBuscadorDerecha, "fa-times", "fa-search", "none");
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
   let valor = input.value;
-    // sugerenciasContenedor.style.display="none";
-    // searchForm.style.paddingBottom = "0px";
-    // searchForm.style.borderRadius= "25px"
-    // searchForm.style.borderBottom = "1px solid";
+    sugerenciasContenedor.style.display="none";
+    searchForm.style.paddingBottom = "0px";
+    searchForm.style.borderRadius= "25px"
+    searchForm.style.borderBottom = "1px solid";
     // input.value = "";
   let offset = 0;
   buscarGif(valor, offset);
@@ -77,16 +77,16 @@ verMas.addEventListener("click", (e) => {
 
 /*llamar a la api y crear mediante dom el gif y sus atributos */
 function buscarGif(link, limite) {
+ 
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${link}&limit=12&offset=${limite}`;
   fetch(url)
-    .then(function (res) {
-      return res.json();
-    })
+    .then(res => res.json())
     .then(function (json) {
+     
       json.data.forEach(function (obj) {
         /*crear los lementos del gif */
 
-
+       
         const gifNombre = obj.title;
         
        
@@ -114,8 +114,9 @@ function buscarGif(link, limite) {
          crearGifs(divBtn, "contenedor-botones", divMadre);
          crearGifs(btnMovil, "btn-movil", divMadre);
          divMadre.appendChild(gifs);
-         crearGifs(divImg, "div-img", divMadre);
          
+         crearGifs(divImg, "div-img", divMadre);
+       
          crearGifs(divMadre, "tamano-gif", contenedor);
     
       /*evento favorito con local storage */
@@ -165,7 +166,11 @@ function buscarGif(link, limite) {
       console.log(err);
     });
 
-    
+    function limpiarHTML() {
+      while (resultado.firstChild) {
+          resultado.removeChild(resultado.firstChild)
+      }
+    }
 
   btnVerMas.style.display = "block";
   linea.style.display = "block";
@@ -193,6 +198,7 @@ fetch(urlTopics)
         
             e.preventDefault();
             input.value = pTopicos.textContent;
+
             let valor = input.value;
             let offset = 0;
             buscarGif(valor, offset);

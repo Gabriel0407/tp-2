@@ -29,7 +29,8 @@ let tiempo;
 let blob;
 let form = new FormData();
 let arrMisGifos = [];
-
+let misGifs = localStorage.getItem("Gifos")
+let dea;
 btnComenzar.addEventListener("click",()=>{
   
     
@@ -147,6 +148,7 @@ btnSubir.addEventListener("click",()=>{
          paso2.style.color="#572EE5";
         info.style.display="flex";
          divGrabar.style.display="block";
+         
         subirGif();
 })
 
@@ -159,19 +161,29 @@ await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghw
         method:'POST',
         body:form,
 })
-// .then((res)=> res.json())
-// .then(gifoSubido=>{
-//      let miGifo = gifoSubido.id;
+.then((res3)=> res3.json())
+.then(gifoId=>{
+        btnsGif.style.display="flex"
+        iconoCargando.src="assets/check.svg"
+        pSubirGifo.textContent="GIFO subido con éxito"
 
-//      arrMisGifos.push(miGifo);
-// console.log(arrMisGifos);
+        
+        let miGif = gifoId.data.id;
+        if(misGifs == null){
+                arrMisGifos=[];
+        }else{
+                arrMisGifos = JSON.parse(misGifs);
+        }
+        
+        arrMisGifos.push(miGif);
+        misGifs = JSON.stringify(arrMisGifos);
+        localStorage.setItem("Gifos",misGifs);
+        
 
-//   localStorage.setItem("misGifos",JSON.stringify(arrMisGifos));
- 
-// })
-// .catch((err)=>{
-//         console.log(err);
-// })
+})
+.catch((err)=>{
+        console.log(err);
+})
 
 
 }
@@ -198,4 +210,9 @@ function time(){
 
       
         contador.innerHTML = `${horas}:${minutos}:${segundos}`;
+}
+
+/*subir gif a mi qlo  */
+function subirGifSeccion(){
+
 }

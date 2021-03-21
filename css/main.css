@@ -728,7 +728,9 @@ header {
         align-items: center;
         margin-top: 148px; }
         .crear-gifs .creargif .subir-gifo .info .icono-cargando {
-          width: 30px; }
+          width: 30px;
+          position: fixed;
+          animation: giragira 5s linar infinite; }
         .crear-gifs .creargif .subir-gifo .info .p-subir-gifo {
           margin-top: 20px;
           font-size: 15px;
