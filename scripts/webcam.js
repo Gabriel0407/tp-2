@@ -214,5 +214,8 @@ function time(){
 
 /*subir gif a mi qlo  */
 function subirGifSeccion(){
+        
+
+
 
 }

@@ -89,30 +89,66 @@ let i = 0;
 
 
 
-
+let abrir;
 
 
 
   /*saber si hay gifs en favoritos */
   let arrFav =[];
+
   // if(arrFav.length === 0 ){
   //   contenedorVacio.style.display= "block"
-  
-  // }
-  function asignarFav(elemento,storage,name){
-    
-    elemento.addEventListener("click",()=>{
-      
-let objGif ={
-    title: name,
-    gif: storage
-    }
-    arrFav.push(objGif);
+   // }
+ 
+  function asignarFav(elemento,storage,name,id){
+   
+      elemento.addEventListener("click",e=>{
+      e.preventDefault();
+       
+        let objGif ={
+          title: name,
+          gif: storage,
+          id:id
+          }
+          let getArr = JSON.parse(localStorage.getItem("gif")|| "[]");
+            const favSelected = getArr.find(e=> e.id ===objGif.id);
+          console.log(getArr[0]);
+          
+          console.log(favSelected);
+          if(getArr[0]===undefined || getArr[0]===null){
+            
+            console.log("no hay nada");
+            arrFav.push(objGif);
+            
+            console.log(arrFav);
+            localStorage.setItem("gif",JSON.stringify(arrFav));
+            asignarFavs();
+          }else{
+     
+              if(
+         
+                arrFav.id == favSelected
+              ){
+                console.log("agregar")
+                arrFav.push(objGif)
+                localStorage.setItem("gif",JSON.stringify(arrFav));
+                asignarFavs();
+              }else{
+                console.log("ya esta")
+              }
+            
+          }
 
-    localStorage.setItem("gif",JSON.stringify(arrFav));
-    asignarFavs()
-  
-  })
+          })
+         
+    
+
+
+
+   
+    
+      
+ 
 
  }
  
@@ -150,7 +186,8 @@ let objGif ={
          crearGifs(gifimg,"gifs-favorito",divMadre);
          crearGifs(divImg, "div-img", divMadre);
         crearGifs(divMadre, "tamano-gif", contenedorDeFavoritos);
-
+    // eliminar fav
+   
 
         expandirContraer(btnMovil,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
         expandirContraer(btnExpandir,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");

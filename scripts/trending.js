@@ -51,6 +51,7 @@ anterior.addEventListener("click",()=>{
             const gifNombre = obj.title;
             const gif = obj.images.fixed_width.url;
             let gifs = document.createElement("img");
+            let id = obj.id;
             gifs.setAttribute("src", gif);
             gifs.setAttribute("class", "gifs", "id", "gifsOver");
             let btnFav = document.createElement("div");
@@ -78,7 +79,7 @@ anterior.addEventListener("click",()=>{
           crearGifs(divMadre,"tamano-gif", carrusel);
           
             /*evento favorito con local storage */
-            asignarFav(btnFav,gif,gifNombre)
+            asignarFav(btnFav,gif,gifNombre,id)
              /*descarga*/
              asignarFavs()
             descarga(btnDescargar,gifs,nombreGif)
