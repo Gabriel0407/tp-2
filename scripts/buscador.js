@@ -37,13 +37,7 @@ function togleBuscador(elemento, remove, add, visibilidad) {
     btnIcon.classList.remove(remove);
     btnIcon.classList.add(add);
     btnBuscador.style.display = visibilidad;
-    if (elemento == input && abierto == false) {
-      abierto = true;
-    } else if (elemento == btnBuscadorDerecha && abierto == true) {
-      console.log("click");
-      input.value = "";
-      abierto = false;
-    }
+   
   });
 }
 

@@ -18,7 +18,8 @@ const btnFinalizar = document.getElementById("btn-finalizar");
 const btnSubir = document.getElementById("btn-subir-gifos");
 const h2Permiso = document.getElementById("h2-permiso");
 const permiso = document.getElementById("p-permiso");
-
+const contenedorMisGifos = document.getElementById("contenedor-gifos");
+const sinContenidoMiGif = document.getElementById("sinContenido-migif")
 
 let habilitado = false;
 let recorder ;
@@ -167,7 +168,8 @@ await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghw
         iconoCargando.src="assets/check.svg"
         pSubirGifo.textContent="GIFO subido con éxito"
 
-        
+
+
         let miGif = gifoId.data.id;
         if(misGifs == null){
                 arrMisGifos=[];
@@ -179,7 +181,7 @@ await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghw
         misGifs = JSON.stringify(arrMisGifos);
         localStorage.setItem("Gifos",misGifs);
         
-
+        llamarMisGif()
 })
 .catch((err)=>{
         console.log(err);
@@ -211,11 +213,26 @@ function time(){
       
         contador.innerHTML = `${horas}:${minutos}:${segundos}`;
 }
+// llamarMisGif()
 
-/*subir gif a mi qlo  */
-function subirGifSeccion(){
+
+/* llamar al mis gifos en la seccion*/
+         
+        let arrMiGif = [localStorage.getItem("Gifos")]
+        if(arrMiGif.length <0){
+                console.log("no hay na");
+                sinContenidoMiGif.style.display = "block";
+        }else{
+                arrMiGif.forEach(e =>{
+                        llamarMisGif(e);
+                })
+        }
         
-
-
-
+        async     function llamarMisGif(gifid){     
+                console.log(gifid);
+                let urlMiGif=`api.giphy.com/v1/gifs/gif_id=${gifid}?api_key=${apiKey}`;
+                let apiGif = await fetch(urlMiGif);
+                console.log(apiGif);
+                let imgmigif = document.createElement('img');
+                contenedorMisGifos.appendChild(imgmigif)
 }
