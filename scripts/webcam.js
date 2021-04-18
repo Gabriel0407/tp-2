@@ -142,53 +142,69 @@ btnRepetir.addEventListener("click",()=>{
 })
 
 /*subir gif a la plataforma */
-btnSubir.addEventListener("click",()=>{
+btnSubir.addEventListener("click",async()=>{
         paso3.style.background="#572EE5";
         paso3.style.color="#ffffff";
         paso2.style.background="#ffffff";
          paso2.style.color="#572EE5";
         info.style.display="flex";
          divGrabar.style.display="block";
-         
-        subirGif();
-})
+  
 
+        const response = await uploadGif(form);
+        console.log(response);
 
-
-async function subirGif(){
-
-
-await fetch(`https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghwaQot2D&file=${gifGrabado}`,{
-        method:'POST',
-        body:form,
-})
-.then((res3)=> res3.json())
-.then(gifoId=>{
+        const gifo = await fetchGifById(response.data.id);
+        storageMyGifo(gifo.data)
+       
         btnsGif.style.display="flex"
         iconoCargando.src="assets/check.svg"
         pSubirGifo.textContent="GIFO subido con éxito"
 
-
-
-        let miGif = gifoId.data.id;
-        if(misGifs == null){
-                arrMisGifos=[];
-        }else{
-                arrMisGifos = JSON.parse(misGifs);
-        }
-        
-        arrMisGifos.push(miGif);
-        misGifs = JSON.stringify(arrMisGifos);
-        localStorage.setItem("Gifos",misGifs);
-        
-        llamarMisGif()
-})
-.catch((err)=>{
-        console.log(err);
 })
 
 
-}
+
+
+
+        
+
+
+async function uploadGif(form) {
+        var requestOptions = {
+            method: "POST",
+            body: form,
+            redirect: "follow",
+        };
+    
+        return await fetch(
+            `https://upload.giphy.com/v1/gifs?api_key=JTTuSKhX493w24cTE17cNArghwaQot2D`,
+            requestOptions
+    
+        ).then((response) => response.json());
+    }
+    
+    async function fetchGifById(id) {
+        console.log(id);
+        return await fetch(
+            `https://api.giphy.com/v1/gifs/${id}?api_key=JTTuSKhX493w24cTE17cNArghwaQot2D`
+        ).then((response) => response.json());
+    }
+    
+    
+    let miGif = localStorage.getItem("myGifos");
+    miGif = miGif ? JSON.parse(miGif) : [];
+    
+    function storageMyGifo(gifo) {
+        miGif.push(gifo);
+        localStorage.setItem("myGifos", JSON.stringify(miGif));
+    }
+
+
+
+
+
+
 function time(){
         segundos++;
 
@@ -213,26 +229,42 @@ function time(){
       
         contador.innerHTML = `${horas}:${minutos}:${segundos}`;
 }
-// llamarMisGif()
 
 
-/* llamar al mis gifos en la seccion*/
-         
-        let arrMiGif = [localStorage.getItem("Gifos")]
-        if(arrMiGif.length <0){
-                console.log("no hay na");
-                sinContenidoMiGif.style.display = "block";
-        }else{
-                arrMiGif.forEach(e =>{
-                        llamarMisGif(e);
-                })
-        }
+misGifos.addEventListener("click",()=>{
+        contenedorMisGifos.innerHTML="";
+if (localStorage.getItem('myGifos')) {
+        miGif = JSON.parse(localStorage.getItem('myGifos'));
+        console.log(miGif)
+        //createGifos()
+    }
+ 
+    if (miGif.length) {
+        console.log(miGif.length)
+       // miniContainerMisGifos.classList.remove('header-misgifos-empty')
+        //createGifos(miniContainerMisGifos, mygifos, { type: "mygifo", original: true });
         
-        async     function llamarMisGif(gifid){     
-                console.log(gifid);
-                let urlMiGif=`api.giphy.com/v1/gifs/gif_id=${gifid}?api_key=${apiKey}`;
-                let apiGif = await fetch(urlMiGif);
-                console.log(apiGif);
-                let imgmigif = document.createElement('img');
-                contenedorMisGifos.appendChild(imgmigif)
-}
+ 
+        miGif.forEach(gif=>{
+         const img = document.createElement("img");
+          console.log(img);
+         const imageContainer = document.createElement("div");
+         imageContainer.classList.add("mis-gifos");
+         img.setAttribute("src",gif.images.fixed_width.url)
+         img.classList.add("imgResultado");
+         img.setAttribute("alt", miGif.title);
+         contenedorMisGifos.appendChild(img);
+ 
+        })
+       
+    } else {
+//       miniContainerMisGifos.innerHTML = `
+//           <img
+//               src="../assets/icon-mis-gifos-sin-contenido.svg"
+//               alt="busqueda-sin-resultado"
+//           >
+//           <p class="no-result-text">¡Anímate a crear tu primer GIFO!</p>
+//         `;
+      // miniContainerMisGifos.classList.add('header-misgifos-empty')
+  }
+})
