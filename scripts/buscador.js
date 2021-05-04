@@ -37,7 +37,7 @@ function togleBuscador(elemento, remove, add, visibilidad) {
     btnIcon.classList.remove(remove);
     btnIcon.classList.add(add);
     btnBuscador.style.display = visibilidad;
-   
+   abierto = true
   });
 }
 
@@ -132,7 +132,7 @@ function buscarGif(link, limite) {
        btnVerMas.style.display="none";
        linea.style.display = "none";
        h2Resultado.style.display ="none";
-      
+      abierto = false
       })
      
     
@@ -146,6 +146,7 @@ function buscarGif(link, limite) {
            btnVerMas.style.display = "none";
            linea.style.display = "none";
            h2Resultado.style.display = "none";
+           abierto = false
          }
        }
      });

@@ -75,12 +75,14 @@ let abrir;
  function asignarFavs(){
   
   contenedorDeFavoritos.innerHTML = '';
- arrFav = JSON.parse(localStorage.getItem("gif"));
+arrFav = JSON.parse(localStorage.getItem("gif"));
+ 
  if(arrFav == null) {
    arrFav = [];
  }else{
+   
    for(i = 0; i< arrFav.length;i++){
-
+   
 
            let gifimg = document.createElement('img');
                gifimg.src = `${arrFav[i].gif}`;
@@ -94,9 +96,10 @@ let abrir;
         nombreGif.textContent= `${arrFav[i].title}`
         let btnMovil = document.createElement("div");
         let cerrar =document.createElement("div")
-        
+        let id = `${arrFav[i].id}`;
          /*atributos y appendchild  mediante una funcion*/
-         crearGifs(btnFav, "far fa-heart btn-gif", divBtn);
+        btnFav.setAttribute("id",`${i}`);
+         crearGifs(btnFav, "far fa-heart btn-gif btnfav", divBtn);
          crearGifs(btnExpandir, "fas fa-expand-alt btn-gif", divBtn);
          crearGifs(btnDescargar, "fas fa-arrow-down btn-gif", divBtn);
          crearGifs(cerrar, "fas fa-times cerrar-btn", divMadre);
@@ -106,11 +109,20 @@ let abrir;
          crearGifs(gifimg,"gifs-favorito",divMadre);
          crearGifs(divImg, "div-img", divMadre);
         crearGifs(divMadre, "tamano-gif", contenedorDeFavoritos);
-    // eliminar fav
-        btnFav.addEventListener("click",()=>{
-          contenedorDeFavoritos.removeChild(divMadre);
-        })
-
+          
+     btnFav.addEventListener("click",()=>{
+            arrFav.splice(i,1);
+            localStorage.setItem("gif",JSON.stringify(arrFav))
+            if(arrFav.length!=0){
+             asignarFavs() 
+          }
+          else{
+            
+              document.querySelector(".contenedorFavoritos").innerHTML="";
+          }
+            
+          })
+        
         expandirContraer(btnMovil,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
         expandirContraer(btnExpandir,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
         expandirContraer(cerrar,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifsTrending","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
@@ -123,3 +135,4 @@ let abrir;
  }
 
 }
+

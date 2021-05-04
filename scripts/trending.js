@@ -49,7 +49,7 @@ anterior.addEventListener("click",()=>{
             
             
             const gifNombre = obj.title;
-            const gif = obj.images.fixed_width.url;
+            const gif = obj.images.original.url;
             let gifs = document.createElement("img");
             let id = obj.id;
             gifs.setAttribute("src", gif);
@@ -67,6 +67,7 @@ anterior.addEventListener("click",()=>{
             
             
           /*atributos y appendchild  mediante una funcion*/
+          
           crearGifs(btnFav, "far fa-heart btn-gif", divBtn);
           crearGifs(btnExpandir, "fas fa-expand-alt btn-gif", divBtn);
           crearGifs(btnDescargar, "fas fa-arrow-down btn-gif", divBtn);
