@@ -9,6 +9,7 @@ const topicos = document.getElementById("trending-topics");
 const h2Resultado = document.getElementById("titulo-resultado");
 const linea = document.getElementById("linea");
 const contenedor = document.getElementById("contenedor-gifs");
+const contenedorM = document.getElementById("contenedormain");
 const btnVerMas = document.getElementById("btn-ver-mas");
 const searchForm = document.getElementById("form-buscador");
 const apiKey = "JTTuSKhX493w24cTE17cNArghwaQot2D";
@@ -37,7 +38,7 @@ function togleBuscador(elemento, remove, add, visibilidad) {
     btnIcon.classList.remove(remove);
     btnIcon.classList.add(add);
     btnBuscador.style.display = visibilidad;
-   abierto = true
+  //  abierto = true
   });
 }
 
@@ -47,14 +48,18 @@ togleBuscador(btnBuscadorDerecha, "fa-times", "fa-search", "none");
 /*evento al buscar*/
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  let valor = input.value;
+  
+    let valor = input.value;
     sugerenciasContenedor.style.display="none";
     searchForm.style.paddingBottom = "0px";
     searchForm.style.borderRadius= "25px"
     searchForm.style.borderBottom = "1px solid";
     // input.value = "";
   let offset = 0;
+  abierto = true;
   buscarGif(valor, offset);
+  
+ 
 
 });
 
@@ -132,21 +137,20 @@ function buscarGif(link, limite) {
        btnVerMas.style.display="none";
        linea.style.display = "none";
        h2Resultado.style.display ="none";
-      abierto = false
+      // abierto = false
       })
      
     
     }
-     input.addEventListener("keyup", (event) => {
-       if (event.keycode == 8 || event.which === 8) {
+     input.addEventListener("keydown", (event) => {
+       if (event.keycode == 08 || event.which === 08) {
          if (abierto == true) {
            input.value = "";
-           
            contenedor.removeChild(divMadre);
            btnVerMas.style.display = "none";
            linea.style.display = "none";
            h2Resultado.style.display = "none";
-           abierto = false
+          //  abierto = false
          }
        }
      });
