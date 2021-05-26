@@ -96,7 +96,7 @@ arrFav = JSON.parse(localStorage.getItem("gif"));
         nombreGif.textContent= `${arrFav[i].title}`
         let btnMovil = document.createElement("div");
         let cerrar =document.createElement("div")
-        let id = `${arrFav[i].id}`;
+        
          /*atributos y appendchild  mediante una funcion*/
         btnFav.setAttribute("id",`${i}`);
          crearGifs(btnFav, "far fa-heart btn-gif btnfav", divBtn);
@@ -111,8 +111,11 @@ arrFav = JSON.parse(localStorage.getItem("gif"));
         crearGifs(divMadre, "tamano-gif", contenedorDeFavoritos);
           
      btnFav.addEventListener("click",()=>{
-            arrFav.splice(i,1);
-            localStorage.setItem("gif",JSON.stringify(arrFav))
+
+            localStorage.getItem("gif",JSON.stringify(arrFav));    
+           arrFav.shift(i,1);
+            localStorage.setItem("gif",JSON.stringify(arrFav));
+            contenedorDeFavoritos.removeChild(divMadre);
             if(arrFav.length!=0){
              asignarFavs() 
           }
