@@ -20,6 +20,8 @@ const h2Permiso = document.getElementById("h2-permiso");
 const permiso = document.getElementById("p-permiso");
 const contenedorMisGifos = document.getElementById("contenedor-gifos");
 const sinContenidoMiGif = document.getElementById("sinContenido-migif")
+const down = document.getElementById("down");
+const link = document.getElementById("link");
 
 let habilitado = false;
 let recorder ;
@@ -107,12 +109,14 @@ btnRepetir.addEventListener("click",()=>{
         recorder.clearRecordedData();
         gifGrabado.style.display="none"
         navigator.mediaDevices.getUserMedia({audio:false, video:true})
+       
 .then((stream)=>{
     
     console.log(stream);
     pantallaVideo.srcObject = stream;
     pantallaVideo.style.display="block";
     btnGrabar.style.display="block";
+    divGrabar.style.display="none";
     h2Permiso.style.display="none";
         permiso.style.display="none";
         paso2.style.background="#572EE5";
@@ -160,7 +164,18 @@ btnSubir.addEventListener("click",async()=>{
         btnsGif.style.display="flex"
         iconoCargando.src="assets/check.svg"
         pSubirGifo.textContent="GIFO subido con éxito"
+        let idGifo = gifo.data.id;
+        down.addEventListener("click",async function(){
+        
+                        let blob = await fetch(
+                                `https://media.giphy.com/media/${idGifo}/giphy.gif`
+                        ).then((img) => img.blob());
+                        invokeSaveAsDialog(blob, 'My-Gif.gif');
+                
+              })
+          
 
+              
 })
 
 
@@ -232,39 +247,68 @@ function time(){
 
 
 misGifos.addEventListener("click",()=>{
+migifoss();
+})
+function migifoss(){
         contenedorMisGifos.innerHTML="";
 if (localStorage.getItem('myGifos')) {
-        miGif = JSON.parse(localStorage.getItem('myGifos'));
-        console.log(miGif)
+        arrMisGifos = JSON.parse(localStorage.getItem('myGifos'));
+        console.log(arrMisGifos)
         //createGifos()
     }
  
-    if (miGif.length) {
-        console.log(miGif.length)
-       // miniContainerMisGifos.classList.remove('header-misgifos-empty')
-        //createGifos(miniContainerMisGifos, mygifos, { type: "mygifo", original: true });
+    if (arrMisGifos.length) {
+        console.log(arrMisGifos.length)
+       
+ 
+        arrMisGifos.forEach(gif=>{
+
+                let gifimg = document.createElement('img');
+                gifimg.src = gif.images.fixed_width.url;
+                let btndelete = document.createElement("div");
+                let btnExpandir = document.createElement("div");
+                let btnDescargar = document.createElement("div");
+                divMadre = document.createElement("div");
+                let divBtn = document.createElement("div");
+                let divImg = document.createElement("div");
+                let nombreGif = document.createElement("p");
+                let btnMovil = document.createElement("div");
+                let cerrar =document.createElement("div")
+                
+                /*atributos y appendchild  mediante una funcion*/
+               
+                crearGifs(btndelete, "fas fa-trash btn-gif btnfav", divBtn);
+                crearGifs(btnExpandir, "fas fa-expand-alt btn-gif", divBtn);
+                crearGifs(btnDescargar, "fas fa-arrow-down btn-gif", divBtn);
+                crearGifs(cerrar, "fas fa-times cerrar-btn", divMadre);
+                crearGifs(nombreGif, "nombre-gif", divImg);
+                crearGifs(divBtn, "contenedor-botones", divMadre);
+                crearGifs(btnMovil, "btn-movil", divMadre);
+                crearGifs(gifimg,"gifs-favorito",divMadre);
+                crearGifs(divImg, "div-img", divMadre);
+                crearGifs(divMadre, "tamano-gif", contenedorMisGifos);
+
+                btndelete.addEventListener("click",(e)=>{
+                        localStorage.getItem("myGifos",JSON.stringify(arrMisGifos));
+                        arrMisGifos.splice(e.this,1)
+                        localStorage.setItem("myGifos",JSON.stringify(arrMisGifos));       
+                        contenedorMisGifos.removeChild(divMadre);
+                        if(arrMisGifos.length!=0){
+                              migifoss();
+                        }
+                        else{
+                                 document.querySelector(".contendor-gifos").innerHTML="";
+                        }
+                })       
+                
+        expandirContraer(btnMovil,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
+        expandirContraer(btnExpandir,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifExpandido","gifsTrending","tamano-gif-expandido","tamano-gif","div-img-expan","div-img","contenedor-botones-expandido","contenedor-botones","11","block","hidden");
+        expandirContraer(cerrar,gifimg,divMadre,divImg,divBtn,cerrar,btnExpandir,"gifsTrending","gifExpandido","tamano-gif","tamano-gif-expandido","div-img","div-img-expand","contenedor-botones","contenedor-botones-expandido","0","none","visible");
+
+        descarga(btnDescargar,gifimg,nombreGif)
+       
         
- 
-        miGif.forEach(gif=>{
-         const img = document.createElement("img");
-          console.log(img);
-         const imageContainer = document.createElement("div");
-         imageContainer.classList.add("mis-gifos");
-         img.setAttribute("src",gif.images.fixed_width.url)
-         img.classList.add("imgResultado");
-         img.setAttribute("alt", miGif.title);
-         contenedorMisGifos.appendChild(img);
- 
         })
        
-    } else {
-//       miniContainerMisGifos.innerHTML = `
-//           <img
-//               src="../assets/icon-mis-gifos-sin-contenido.svg"
-//               alt="busqueda-sin-resultado"
-//           >
-//           <p class="no-result-text">¡Anímate a crear tu primer GIFO!</p>
-//         `;
-      // miniContainerMisGifos.classList.add('header-misgifos-empty')
-  }
-})
+    }
+}

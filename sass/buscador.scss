@@ -162,6 +162,10 @@
         
         content:", ";
       }
+
+      body.dark &{
+        color: $color-light;
+      }
     }
   }
   .btn-ver-mas {
@@ -176,10 +180,18 @@
     font-size: 13px;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
+    body.dark &{
+      border: 1px solid $color-light;
+      color: $color-light;
+    }
   }
   .efecto-vermas {
     background-color: $color-principal;
     color: $color-light;
+    body.dark &{
+      background-color: $color-light;
+      color: $color-dark;
+    }
   }
   .contenedor-gifs {
     margin-top: 120px;
@@ -352,6 +364,10 @@
           font-size: 20px;
           padding: 6px 0px;
           width: 90%;
+
+          body.dark &{
+            color: $color-light;
+          }
         }
         .btn-buscar-derecha {
           font-size: 20px;

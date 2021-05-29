@@ -99,7 +99,7 @@ arrFav = JSON.parse(localStorage.getItem("gif"));
         
          /*atributos y appendchild  mediante una funcion*/
         btnFav.setAttribute("id",`${i}`);
-         crearGifs(btnFav, "far fa-heart btn-gif btnfav", divBtn);
+         crearGifs(btnFav, "fas fa-trash btn-gif btnfav", divBtn);
          crearGifs(btnExpandir, "fas fa-expand-alt btn-gif", divBtn);
          crearGifs(btnDescargar, "fas fa-arrow-down btn-gif", divBtn);
          crearGifs(cerrar, "fas fa-times cerrar-btn", divMadre);
@@ -110,10 +110,10 @@ arrFav = JSON.parse(localStorage.getItem("gif"));
          crearGifs(divImg, "div-img", divMadre);
         crearGifs(divMadre, "tamano-gif", contenedorDeFavoritos);
           
-     btnFav.addEventListener("click",()=>{
+     btnFav.addEventListener("click",(e)=>{
 
             localStorage.getItem("gif",JSON.stringify(arrFav));    
-           arrFav.shift(i,1);
+           arrFav.splice(e.this,1);
             localStorage.setItem("gif",JSON.stringify(arrFav));
             contenedorDeFavoritos.removeChild(divMadre);
             if(arrFav.length!=0){

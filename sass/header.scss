@@ -1,19 +1,19 @@
 header{
-    z-index: 10;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 95px;
-   align-items: center;
-   position: fixed;
-  border-top: 5px solid $color-principal;
-   top: 0;
- background-color: $color-light;
-    box-shadow: 0 0 10px rgb(211, 211, 211);
-    body.dark &{
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 95px;
+        align-items: center;
+        position: fixed;
+        border-top: 5px solid $color-principal;
+        top: 0;
+        background-color: $color-light;
+        box-shadow: 0 0 10px rgb(211, 211, 211);
+        body.dark &{
         border-top: $color-dark;
-background-color: $color-dark-gray;
-box-shadow: none;
+        background-color: $color-dark-gray;
+        box-shadow: none;
         .burger{
             color: $color-light;
             background-color: transparent;

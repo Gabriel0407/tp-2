@@ -174,6 +174,10 @@
                z-index: 2;
                border: 1px solid $color-principal;
                margin-top: 30px;
+               body.dark &{
+                border: 1px solid  $color-light;
+                color:  $color-light;
+              }
             }
             .siguiente{
                 border: 1px solid $color-principal;
@@ -181,12 +185,20 @@
                 padding: 8px 10px;
                 z-index: 2; 
                 margin-top: 30px;
+                body.dark &{
+                  border: 1px solid  $color-light;
+                  color:  $color-light;
+                }
             }
             .efecto-flechas{
                 background-color: $color-principal;
                 color: white;
                 cursor: pointer;
-                
+                body.dark &{
+
+                  background-color:  $color-light;
+                  color: $color-dark;
+                }
             }
             .carrusel{
                scroll-behavior: smooth;
